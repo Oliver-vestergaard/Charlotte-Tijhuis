@@ -1,5 +1,17 @@
 ---
+import ProductCard from "../components/ProductCard.astro";
+import CardButton from "../components/CardButton.astro";
 import Layout from "../layout/Layout.astro";
 ---
 
 <Layout title="Produckt List" />
+
+<h1 class="bestseller_title">Bestsellers</h1>
+<ProductCard title="Tvistet Guldring" price="7000kr" image="//" href="/blog/astro" />
+<CardButton text="Læs mere" />
+
+<style>
+  .bestseller_title {
+    text-align: center;
+  }
+</style>
