@@ -2,12 +2,27 @@
 import ProductCard from "../components/ProductCard.astro";
 import CardButton from "../components/CardButton.astro";
 import Layout from "../layout/Layout.astro";
+
+/*fetch data*/
+const url = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis?select=*`;
+const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
+
+const options = {
+  headers: {
+    apikey: apiKey,
+    Authorization: `Bearer ${apiKey}`,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+
+console.log(data);
 ---
 
 <Layout title="Produckt List" />
 
 <h1 class="bestseller_title">Bestsellers</h1>
-<ProductCard title="Tvistet Guldring" price="7000kr" image="//" href="/blog/astro" />
+<ProductCard title="Tvistet Guldring" price="7000kr" image="src/assets/imgProductList/finsk_lapphund.jpg" href="/blog/astro" />
 <CardButton text="Læs mere" />
 
 <style>
