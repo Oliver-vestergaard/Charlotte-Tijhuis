@@ -1,3 +1,49 @@
 ---
 
 ---
+
+<div class="grafisk_element">
+  <img src="src/assets/imgIndex/grafisk_element_1.webp" alt="grafisk_element_1" />
+</div>
+
+<div class="index_container">
+  <a href="/forside">
+    <img src="src/assets/imgIndex/hus.webp" class="index_img" alt="hus_click_to_enter" />
+  </a>
+</div>
+
+<style>
+  body {
+    background-color: rgb(250, 207, 169);
+  }
+
+  .grafisk_element {
+    width: 100vw;
+    margin-left: calc(50% - 50vw); /*re-center*/
+  }
+
+  .grafisk_element img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 6rem;
+  }
+
+  .index_container {
+    overflow: hidden; /* ingen layout shift når vi scalerer */
+  }
+  .index_img {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    transition: transform 0.3s ease;
+  }
+
+  .index_img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+</style>

@@ -6,7 +6,6 @@ const { title, price, image } = Astro.props;
   {image && <img src={image} alt={title} class="card-image" />}
 </div>
 
-<!-- title + price OUTSIDE the card -->
 <div class="card_content">
   <h2>{title}</h2>
   <p>{price}</p>
