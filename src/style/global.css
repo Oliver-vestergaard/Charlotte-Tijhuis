@@ -1,0 +1,97 @@
+/****** RESEt ******/
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/******** FONTS *********/
+
+h1 {
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  color: var(--text-color);
+}
+
+h2 {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+h3 {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+h4 {
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+p,
+a,
+ul,
+ol {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--text-color);
+}
+
+/********* COLORS *********/
+
+:root {
+  --background-color: #fff2ef;
+  --text-color: #0b2320;
+  --section-color: #ffe3c4;
+  --cta-color: #f5c3c8;
+  --decoration-color: #f5d16b;
+  --purpleDecoration-color: #5e2750;
+}
+
+body {
+  background-color: var(--background-color);
+}
+/********** DESKTOP **********/
+@media (min-width: 801px) {
+  /****** FONT ******/
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  p,
+  a,
+  ul,
+  ol {
+    font-size: 20px;
+  }
+}

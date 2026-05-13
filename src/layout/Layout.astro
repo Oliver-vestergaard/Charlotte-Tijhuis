@@ -1,0 +1,30 @@
+---
+import "../style/global.css";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Coming+Soon&family=Gowun+Batang&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
