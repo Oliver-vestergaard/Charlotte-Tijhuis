@@ -1,0 +1,47 @@
+---
+const { title, price, image } = Astro.props;
+---
+
+<div class="product_card">
+  {image && <img src={image} alt={title} class="card-image" />}
+</div>
+
+<!-- title + price OUTSIDE the card -->
+<div class="card_content">
+  <h2>{title}</h2>
+  <p>{price}</p>
+</div>
+
+<style>
+  .product_card {
+    display: block;
+    overflow: hidden;
+    max-width: 320px;
+    background: white;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card_content {
+    margin-top: 10px;
+  }
+
+  .card_content h2 {
+    font-family: Gowun Batang;
+    color: var(--text-color);
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+  }
+
+  .card_content p {
+    font-family: Gowun Batang;
+    color: var(--text-color);
+    margin: 0;
+    font-size: 0.9rem;
+  }
+</style>

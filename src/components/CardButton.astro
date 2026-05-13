@@ -1,0 +1,28 @@
+---
+const { text, type = "button" } = Astro.props;
+---
+
+<div class="btn_wrapper">
+  <button class="btn" type={type}>
+    {text}
+  </button>
+</div>
+
+<style>
+  .btn_wrapper {
+    display: inline-block;
+    padding: 1px;
+    background: #f5d16b;
+    /*shape*/
+    clip-path: polygon(12% 0%, 88% 0%, 100% 20%, 100% 80%, 88% 100%, 12% 100%, 0% 80%, 0% 20%);
+  }
+
+  .btn {
+    font-family: Gowun Batang;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #f5c3c8;
+    clip-path: inherit; /* beholder samme form som clip-path polygon */
+  }
+</style>
