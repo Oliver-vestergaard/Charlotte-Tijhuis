@@ -1,0 +1,67 @@
+---
+import "../style/global.css";
+
+import SocialMedia from "../components/SocialMedia.astro";
+---
+
+<div class="footerSection">
+  <div class="footer">
+    <div class="Kontakt">
+      <h3>Brug for hjælp?</h3>
+      <a href="">guldsmed@charlotte-t.dk</a>
+      <p>
+        +45 81 44 66 88 <br />
+
+        Helsingørsgade 3, <br />
+        3400 Hillerød
+      </p>
+    </div>
+
+    <SocialMedia SocialMediaTekst="Socials" />
+
+    <div class="kontaktLinks">
+      <a href="/omOs">Om mig</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/bohippe">Bohippie</a>
+    </div>
+  </div>
+
+  <hr />
+  <p class="footerName">© Guldsmed Charlotte Tijhuis</p>
+</div>
+<style>
+  .footerSection {
+    background-color: var(--section-color);
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    padding: 1rem;
+    align-items: start;
+  }
+
+  .kontaktLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footerName {
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  hr {
+    background-color: black;
+    height: 2px;
+  }
+  @media (min-width: 801px) {
+    .kontaktLinks a {
+      font-size: 30px;
+    }
+
+    .kontaktLinks {
+      gap: 1rem;
+    }
+  }
+</style>

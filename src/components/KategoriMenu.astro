@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import Ringe from "../assets/imgMenu/ring.png";
+import Armbånd from "../assets/imgMenu/armband.png";
+import Halskæde from "../assets/imgMenu/halskaede.png";
+import Ørering from "../assets/imgMenu/orering.png";
+import Herre from "../assets/imgMenu/herre.png";
+import "../style/global.css";
+---
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="productList?kategori=ring">
+      <Image class="kategoriImg" src={Ringe} width={200} format="webP" alt="Menu Kategori Ringe" />
+      Ringe</a
+    >
+  </li>
+  <li>
+    <a href="productList?kategori=armband">
+      <Image class="kategoriImg" src={Armbånd} width={200} format="webP" alt="Menu Kategori Armbånd" />
+      Armbånd</a
+    >
+  </li>
+  <li>
+    <a href="productList?kategori=halskaede">
+      <Image class="kategoriImg" src={Halskæde} width={200} format="webP" alt="Menu Kategori Halskæde" />
+      Halskæde</a
+    >
+  </li>
+  <li>
+    <a href="productList?kategori=orering">
+      <Image class="kategoriImg" src={Ørering} width={200} format="webP" alt="Menu Kategori Ørering" />
+      Ørering
+    </a>
+  </li>
+  <li>
+    <a href="productList?kategori=herre">
+      <Image class="kategoriImg" src={Herre} width={200} format="webP" alt="Menu Kategori Herre" />
+      Herre
+    </a>
+  </li>
+
+  <style>
+    .dropdown-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      position: absolute;
+      gap: 5rem;
+      padding: 2rem;
+      background: var(--section-color);
+
+      border: 2px solid var(--footer-color);
+    }
+
+    .dropdown-menu li a {
+      color: var(--text-color);
+    }
+    li {
+      list-style: none;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+</ul>
