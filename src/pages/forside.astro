@@ -2,96 +2,96 @@
 import Layout from "../layout/Layout.astro";
 ---
 
-<Layout title="Forside" />
+<Layout title="Forside">
+  <div>
+    <video class="video" autoplay muted loop playsinline src="/forsidevideo.mp4"> </video>
 
-<div>
-  <video class="video" autoplay muted loop playsinline src="/forsidevideo.mp4"> </video>
-
-  <div class="tekst">
-    <h2 class="h2tekst">Tidsløs elegance skabt med omtanke</h2>
-    <p class="ptekst">I den lyserøde bygning på Helsingørsgade 3 i Hillerød finder du min guldsmedebutik — et sted fyldt med varme og passion, hvor mit håndværk bliver skabt fra bunden med sit autentiske udtryk og sans for organiske former. Her forenes tidløst design med ægte håndværk, og hvert smykke bliver skabt med omtanke, personlighed og fokus på kvalitet. Jeg tror på smykker, der ikke blot er smukke at bære, men som også fortæller en historie og kan følge dig gennem livet.</p>
+    <div class="tekst">
+      <h2 class="h2tekst">Tidsløs elegance skabt med omtanke</h2>
+      <p class="ptekst">I den lyserøde bygning på Helsingørsgade 3 i Hillerød finder du min guldsmedebutik — et sted fyldt med varme og passion, hvor mit håndværk bliver skabt fra bunden med sit autentiske udtryk og sans for organiske former. Her forenes tidløst design med ægte håndværk, og hvert smykke bliver skabt med omtanke, personlighed og fokus på kvalitet. Jeg tror på smykker, der ikke blot er smukke at bære, men som også fortæller en historie og kan følge dig gennem livet.</p>
+    </div>
   </div>
-</div>
 
-<section class="grid1-4">
-  <img class="pic1" src="src/assets/imgForside/forsidepic1.webp" alt="Billede af en guldring bestående af 8 billianter" />
-  <h3 class="skrift">Se mine signatur smykker</h3>
+  <section class="grid1-4">
+    <img class="pic1" src="src/assets/imgForside/forsidepic1.webp" alt="Billede af en guldring bestående af 8 billianter" />
+    <h3 class="skrift">Se mine signatur smykker</h3>
 
-  <div class="grid1-2">
-    <img src="src/assets/imgForside/forsidepic2.webp" alt="Billede af ring med stor lyserød brilliant" />
-    <img src="src/assets/imgForside/forsidepic3.webp" alt="Billede af ring med stor grøn brilliant" />
-    <img src="src/assets/imgForside/forsidepic4.webp" alt="Billede af armbånd med grønne sten" />
-    <img src="src/assets/imgForside/forsidepic5.webp" alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om" />
-  </div>
-</section>
+    <div class="grid1-2">
+      <img src="src/assets/imgForside/forsidepic2.webp" alt="Billede af ring med stor lyserød brilliant" />
+      <img src="src/assets/imgForside/forsidepic3.webp" alt="Billede af ring med stor grøn brilliant" />
+      <img src="src/assets/imgForside/forsidepic4.webp" alt="Billede af armbånd med grønne sten" />
+      <img src="src/assets/imgForside/forsidepic5.webp" alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om" />
+    </div>
+  </section>
 
-<h2>Tidsløse herresmykker med kant</h2>
+  <h2>Tidsløse herresmykker med kant</h2>
 
-<style>
-  .video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+  <style>
+    .video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-  .tekst {
-    padding: 50px;
-    margin: 0 auto;
-    max-width: 900px;
-  }
+    .tekst {
+      padding: 50px;
+      margin: 0 auto;
+      max-width: 900px;
+    }
 
-  .h2tekst {
-    margin-bottom: 20px;
-    text-align: center;
-  }
+    .h2tekst {
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-  .ptekst {
-    line-height: 1.6;
-    max-width: 65ch;
-    margin: 0 auto;
-  }
+    .ptekst {
+      line-height: 1.6;
+      max-width: 65ch;
+      margin: 0 auto;
+    }
 
-  .grid1-4 {
-    margin: 0 auto;
-    padding: 0rem 3rem;
-  }
-
-  .pic1 {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .skrift {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .grid1-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  @media (min-width: 800px) {
     .grid1-4 {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 20px;
-      max-width: 1300px;
-      margin: auto;
-      padding: 40px;
+      margin: 0 auto;
+      padding: 0rem 3rem;
     }
 
     .pic1 {
-      grid-row: 1 / 4;
+      width: 100%;
+      margin-bottom: 2rem;
     }
+
     .skrift {
-      margin-top: 4rem;
-      grid-column: 2 / 4;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
     .grid1-2 {
-      grid-column: 2 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
     }
-  }
-</style>
+
+    @media (min-width: 800px) {
+      .grid1-4 {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 20px;
+        max-width: 1300px;
+        margin: auto;
+        padding: 40px;
+      }
+
+      .pic1 {
+        grid-row: 1 / 4;
+      }
+      .skrift {
+        margin-top: 4rem;
+        grid-column: 2 / 4;
+      }
+
+      .grid1-2 {
+        grid-column: 2 / 4;
+      }
+    }
+  </style>
+</Layout>
