@@ -17,14 +17,25 @@ import Layout from "../layout/Layout.astro";
     <h3 class="skrift">Se mine signatur smykker</h3>
 
     <div class="grid1-2">
-      <img src="src/assets/imgForside/forsidepic2.webp" alt="Billede af ring med stor lyserød brilliant" />
-      <img src="src/assets/imgForside/forsidepic3.webp" alt="Billede af ring med stor grøn brilliant" />
+      <img src="src/assets/imgForside/forside2pic.webp" alt="Billede af ring med stor lyserød brilliant" />
+      <img src="src/assets/imgForside/forside3pic.webp" alt="Billede af ring med stor grøn brilliant" />
       <img src="src/assets/imgForside/forsidepic4.webp" alt="Billede af armbånd med grønne sten" />
-      <img src="src/assets/imgForside/forsidepic5.webp" alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om" />
+      <img src="src/assets/imgForside/forside5pic.webp" alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om" />
     </div>
   </section>
 
-  <h2>Tidsløse herresmykker med kant</h2>
+  <h2 class="h2tekst2">Tidsløse herresmykker med kant</h2>
+
+  <div class="grid1-1">
+    <img class="topbillede" src="src/assets/imgForside/forsidepic7.webp" alt="Billede af to læderarmbånd med et kompas, den ene i sort og det andet i brunt" />
+    <img class="topbillede" src="src/assets/imgForside/forsidepic8.webp" alt="Billede af en herre sølv ring med et kompas" />
+    <div class="tekst2">
+      <p>Rustikke, rå og tidløse herresmykker i kvalitetsmaterialer. Laves på bestilling efter dine ønsker i sølv, guld eller læder. Herresmykkerne er til dig, der ønsker noget anderledes, råt og maskulint. Jeg håndgraverer i både sølv og guld, og motivet på læderarmbåndene kan tilpasses præcis efter dine ønsker.</p>
+    </div>
+    <img class="bundbillede" src="src/assets/imgForside/forsidepic9.webp" alt="Billede af et herrearmånd med forskellige grønne perler" />
+  </div>
+
+  <h4 class="citat">“Hvis du ved hvordan du vil have det så kommer det til dig - der er altid en vej”</h4>
 
   <style>
     .video {
@@ -71,12 +82,47 @@ import Layout from "../layout/Layout.astro";
       gap: 1rem;
     }
 
+    .h2tekst2 {
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .grid1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .grid1-1 img {
+      object-fit: cover;
+      display: block;
+    }
+
+    .topbillede {
+      height: 150px;
+    }
+
+    .tekst2 {
+      padding: 1rem;
+      line-height: 1.6;
+    }
+
+    .bundbillede {
+      height: 150px;
+      margin-bottom: 4rem;
+    }
+
+    .citat {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding: 2rem;
+    }
+
     @media (min-width: 800px) {
       .grid1-4 {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         gap: 20px;
-        max-width: 1300px;
+        max-width: 1400px;
         margin: auto;
         padding: 40px;
       }
@@ -91,6 +137,19 @@ import Layout from "../layout/Layout.astro";
 
       .grid1-2 {
         grid-column: 2 / 4;
+      }
+
+      .topbillede {
+        height: 370px;
+      }
+
+      .tekst2 {
+        padding: 7rem;
+      }
+
+      .bundbillede {
+        height: 370px;
+        margin-bottom: 5rem;
       }
     }
   </style>
