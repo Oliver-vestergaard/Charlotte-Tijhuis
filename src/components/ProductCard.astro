@@ -1,40 +1,89 @@
 ---
-const { title, price, image } = Astro.props;
+import CardButton from "../components/CardButton.astro";
+
+const { title, price, image, hoverImage } = Astro.props;
 ---
 
 <div class="product_card">
-  {image && <img src={image} alt={title} class="card-image" />}
-</div>
+  <div class="image_wrapper">
+    {image && <img src={image} alt={title} class="card-image default" />}
 
-<div class="card_content">
-  <h2>{title}</h2>
-  <p>{price}</p>
+    {hoverImage && <img src={hoverImage} alt={title} class="card-image hover" />}
+  </div>
+
+  <div class="card_content">
+    <h2>{title}</h2>
+
+    <div class="price_row">
+      <p>{price}</p>
+      <CardButton text="Læs mere" />
+    </div>
+  </div>
 </div>
 
 <style>
   .product_card {
-    display: block;
-    overflow: hidden;
     max-width: 320px;
-    background: white;
+    overflow: hidden;
   }
 
-  .card-image {
+  /* stacker images*/
+  .image_wrapper {
+    position: relative;
     width: 100%;
-    height: auto;
-    display: block;
+    aspect-ratio: 1 / 1; /* højde */
+    overflow: hidden;
+  }
+
+  /* begge images er stacked */
+  .card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  /* default img */
+  .card-image.default {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  /* hover hidden */
+  .card-image.hover {
+    opacity: 0;
+    z-index: 2;
+  }
+
+  /* hover effekt */
+  .image_wrapper:hover .hover {
+    opacity: 1;
+  }
+
+  .image_wrapper:hover .default {
+    opacity: 0;
   }
 
   .card_content {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .card_content h2 {
     font-family: Gowun Batang;
-    color: var(--text-color);
-    margin: 0 0 4px;
+    margin: 0;
     font-size: 1.1rem;
+  }
+
+  .price_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .card_content p {
