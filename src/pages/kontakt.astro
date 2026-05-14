@@ -1,5 +1,25 @@
 ---
+import LangFormboks from "../components/LangFormboks.astro";
 import Layout from "../layout/Layout.astro";
 ---
 
-<Layout title="Kontakt" />
+<Layout title="Kontakt">
+  <h1>Kontakt</h1>
+
+  <form id="forms">
+    <LangFormboks name="E-mail" placeholder="Din email" />
+
+    <LangFormboks name="Navn" placeholder="Dit navn" />
+
+    <LangFormboks name="Efternavn" placeholder="Dit efternavn" />
+  </form>
+</Layout>
+
+<style>
+  #forms {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px;
+  }
+</style>
