@@ -44,8 +44,13 @@ h4 {
   color: var(--text-color);
 }
 
+a {
+  font-family: "Gowun Batang", serif;
+  font-size: 11px;
+  color: var(--text-color);
+}
+
 p,
-a,
 ul,
 ol {
   font-family: "Roboto", sans-serif;
@@ -88,8 +93,11 @@ body {
     font-size: 25px;
   }
 
+  a {
+    font-size: 25px;
+  }
+
   p,
-  a,
   ul,
   ol {
     font-size: 20px;
