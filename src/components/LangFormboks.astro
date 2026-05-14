@@ -1,0 +1,16 @@
+---
+const { placeholder, type = "text", name } = Astro.props;
+---
+
+<input class="lang-formboks" type={type} name={name} placeholder={placeholder} required />
+
+<style>
+  .lang-formboks {
+    width: 500px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: #d9d9d9;
+    padding: 10px;
+  }
+</style>
