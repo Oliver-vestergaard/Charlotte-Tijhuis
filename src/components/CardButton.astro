@@ -3,7 +3,7 @@ const { text, type = "button" } = Astro.props;
 ---
 
 <div class="btn_wrapper">
-  <button class="btn" type={type}>
+  <button class="btn sort_btn" type={type}>
     {text}
   </button>
 </div>
@@ -24,5 +24,10 @@ const { text, type = "button" } = Astro.props;
     border: none;
     background-color: #f5c3c8;
     clip-path: inherit; /* beholder samme form som clip-path polygon */
+  }
+
+  .btn:hover {
+    background-color: #fff2ef;
+    transition: background-color 0.4s ease;
   }
 </style>

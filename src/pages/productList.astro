@@ -1,32 +1,79 @@
 ---
-import ProductCard from "../components/ProductCard.astro";
+export const prerender = false;
+
 import CardButton from "../components/CardButton.astro";
+import ProductCard from "../components/ProductCard.astro";
 import Layout from "../layout/Layout.astro";
 
-/*fetch data*/
-const url = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis?select=*`;
+const kategori = Astro.url.searchParams.get("kategori");
+
+const baseUrl = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis`;
+
+const params = new URLSearchParams();
+params.set("select", "*");
+
+if (kategori) {
+  params.set("kategori", `eq.${kategori}`);
+}
+
+const url = `${baseUrl}?${params.toString()}`;
+
 const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
 
-const options = {
+const res = await fetch(url, {
   headers: {
     apikey: apiKey,
     Authorization: `Bearer ${apiKey}`,
   },
-};
+});
 
-const data = await fetch(url, options).then((res) => res.json());
-
-console.log(data);
+const data = await res.json();
 ---
 
-<Layout title="Produckt List" />
-
-<h1 class="bestseller_title">Bestsellers</h1>
-<ProductCard title="Tvistet Guldring" price="7000kr" image="src/assets/imgProductList/finsk_lapphund.jpg" href="/blog/astro" />
-<CardButton text="Læs mere" />
+<Layout title="Product List">
+  <h1 class="bestseller_title">Bestsellers</h1>
+  <div class="grafisk_element">
+    <img src="src/assets/imgIndex/grafisk_element_1.webp" alt="grafisk_element_1" />
+  </div>
+  <div class="sort_wrapper">
+    <CardButton text="Sorter efter pris ⇅" />
+  </div>
+  <div class="product_grid">
+    {data.map((product: Product) => <ProductCard title={product.smykkenavn} price={product.pris} image={product.produktimage} hoverImage={product.produkthover} />)}
+  </div>
+</Layout>
 
 <style>
   .bestseller_title {
     text-align: center;
+  }
+  .grafisk_element {
+    width: 100vw;
+    margin-left: calc(50% - 50vw); /*re-center*/
+  }
+
+  .grafisk_element img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 6rem;
+  }
+
+  .sort_wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5rem;
+  }
+
+  .product_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 4rem;
   }
 </style>
