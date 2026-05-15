@@ -7,24 +7,55 @@ import Layout from "../layout/Layout.astro";
 <Layout title="Kontakt">
   <h1>Kontakt</h1>
 
-  <form id="forms">
-    <LangFormboks name="E-mail" placeholder="Din email" />
+  <section class="sectionform">
+    <div class="grid">
+      <form id="forms">
+        <h3>Reserver dit smykke:</h3>
+        <LangFormboks name="E-mail" placeholder="Din email" />
 
-    <LangFormboks name="Navn" placeholder="Dit navn" />
+        <LangFormboks name="Navn" placeholder="Dit navn" />
 
-    <LangFormboks name="Efternavn" placeholder="Dit efternavn" />
+        <LangFormboks name="Efternavn" placeholder="Dit efternavn" />
 
-    <div class="kort">
-      <KortFormboks name="smykke" options={["Ring", "Øreringe", "Halskæde", "Armbånd", "Herresmykke"]} />
+        <div class="kort">
+          <KortFormboks name="smykke" options={["Ring", "Øreringe", "Halskæde", "Armbånd", "Herresmykke"]} />
+        </div>
+
+        <textarea class="tekstboks" placeholder="Din besked til mig.."></textarea>
+
+        <button class="sendknap">Send </button>
+      </form>
+
+      <div class="kontaktinfo">
+        <h3>“Reserver dit smykke hos mig og husk at forkæle både dig selv og en, du holder af.”</h3>
+
+        <div class="butikinfo">
+          <h3>Ses vi i butikken?</h3>
+          <p class="ptekst">Helsingørsgade 3, 3400 Hillerød</p>
+          <ul class="tider">
+            <li>Mandag: Lukket</li>
+            <li>Tirsdag: Efter aftale</li>
+            <li>Onsdag: Efter aftale</li>
+            <li>Torsdag: 11:00 – 17:30</li>
+            <li>Fredag: 11:00 – 17:30</li>
+            <li>Lørdag: 11:00 – 14:00</li>
+            <li>Søndag: Lukket</li>
+          </ul>
+        </div>
+
+        <h3>Følg med på:</h3>
+      </div>
     </div>
-
-    <textarea class="tekstboks" placeholder="Din besked til mig.."></textarea>
-
-    <button class="sendknap">Send </button>
-  </form>
+  </section>
 </Layout>
 
 <style>
+  .sectionform {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
   #forms {
     display: flex;
     flex-direction: column;
@@ -40,7 +71,7 @@ import Layout from "../layout/Layout.astro";
     height: 250px;
     border-radius: 15px;
     border: 1px solid black;
-    background-color: #d9d9d9;
+    background-color: #eeeded;
     padding: 10px;
     margin-top: 3rem;
     margin-bottom: 1rem;
@@ -56,5 +87,38 @@ import Layout from "../layout/Layout.astro";
     font-family: Gowun Batang;
     cursor: pointer;
     clip-path: polygon(12% 0%, 88% 0%, 100% 20%, 100% 80%, 88% 100%, 12% 100%, 0% 80%, 0% 20%);
+    margin-bottom: 5rem;
+  }
+
+  .ptekst {
+    margin-bottom: 1rem;
+  }
+
+  .kontaktinfo {
+    background-color: #eeeded;
+    padding: 40px 30px;
+    width: 300px;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .butikinfo {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .tider {
+    list-style: none;
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: flex;
+    }
+
+    .kontaktinfo {
+      width: 400px;
+      margin-left:;
+    }
   }
 </style>
