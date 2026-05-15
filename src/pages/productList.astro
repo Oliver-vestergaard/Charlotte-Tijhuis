@@ -1,8 +1,8 @@
 ---
 export const prerender = false;
 
-import CardButton from "../components/CardButton.astro";
 import ProductCard from "../components/ProductCard.astro";
+import SortButton from "../components/SortButton.astro";
 import Layout from "../layout/Layout.astro";
 
 const kategori = Astro.url.searchParams.get("kategori");
@@ -36,10 +36,17 @@ const data = await res.json();
     <img src="src/assets/imgIndex/grafisk_element_1.webp" alt="grafisk_element_1" />
   </div>
   <div class="sort_wrapper">
-    <CardButton text="Sorter efter pris ⇅" />
+    <SortButton text="Sorter efter pris ⇅" id="sortBtn" />
   </div>
-  <div class="product_grid">
-    {data.map((product: Product) => <ProductCard title={product.smykkenavn} price={product.pris} image={product.produktimage} hoverImage={product.produkthover} />)}
+  <div class="product_grid" id="productGrid">
+    {
+      data.map((product: Product) => (
+        /* laver data-price så js/script nemmere kan læse dataen*/
+        <div class="product-item" data-price={product.pris}>
+          <ProductCard title={product.smykkenavn} price={product.pris} image={product.produktimage} hoverImage={product.produkthover} />
+        </div>
+      ))
+    }
   </div>
 </Layout>
 
@@ -79,3 +86,30 @@ const data = await res.json();
     margin-bottom: 10rem;
   }
 </style>
+
+<script>
+  /*sort button js*/
+  const btn = document.querySelector("#sortBtn");
+  const grid = document.querySelector("#productGrid");
+
+  /*højt til lavt*/
+  let isAscending = true;
+
+  btn?.addEventListener("click", () => {
+    /*få al data i en ny array*/
+    const items = Array.from(grid.querySelectorAll(".product-item"));
+
+    /*sorter efter vores price "attribute"*/
+    items.sort((a, b) => {
+      const priceA = parseFloat(a.getAttribute("data-price"));
+      const priceB = parseFloat(b.getAttribute("data-price"));
+      return isAscending ? priceA - priceB : priceB - priceA;
+    });
+
+    /*grid--> sorterer og placerer samme data bare efter pris*/
+    items.forEach((item) => grid.appendChild(item));
+
+    /* for at kunne klikke igen og sortere efter modsat*/
+    isAscending = !isAscending;
+  });
+</script>

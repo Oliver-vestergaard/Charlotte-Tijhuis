@@ -1,0 +1,43 @@
+---
+import "../style/global.css";
+const { text, id } = Astro.props;
+---
+
+<div class="btn_wrapper">
+  <button id={id} class="btn sort_btn" type="button">
+    {text}
+  </button>
+</div>
+
+<style>
+  .btn_wrapper {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+
+    --clip: polygon(12% 0%, 88% 0%, 100% 20%, 100% 80%, 88% 100%, 12% 100%, 0% 80%, 0% 20%);
+    clip-path: var(--clip);
+    background: #f5d16b;
+    padding: 1.5px;
+  }
+
+  .btn {
+    display: block;
+    font-family: Gowun Batang;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #f5c3c8;
+
+    clip-path: var(--clip);
+    transition: background-color 0.4s ease;
+  }
+
+  .btn:hover {
+    background-color: var(--background-color);
+  }
+
+  .btn_wrapper:hover {
+    background: var(--purpleDecoration-color);
+  }
+</style>
