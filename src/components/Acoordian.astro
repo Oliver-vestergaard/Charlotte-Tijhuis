@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+import Snirkel from "../assets/imgProductDetails/Snirkel5.png";
+const { title, content, overskrift, overskrift2, content2 } = Astro.props;
+---
+
+<details class="Accordion">
+  <summary>
+    <div class="flex">
+      <Image class="Snirkel" src={Snirkel} width={50} format="webP" alt="Menu Kategori Armbånd" />
+      <h3>{title}</h3>
+    </div>
+    <hr />
+  </summary>
+  <div class="content">
+    <p class="Bold">{overskrift}</p>
+
+    <p>{content}</p>
+    <p class="Bold">{overskrift2}</p>
+
+    <p>{content2}</p>
+  </div>
+</details>
+
+<style>
+  .Bold {
+    font-weight: bold;
+    margin: 0rem;
+  }
+  .Accordion {
+    max-width: 400px;
+  }
+
+  .content {
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+      max-height 0.5s ease,
+      opacity 0.4s ease;
+  }
+
+  .Accordion[open] .content {
+    opacity: 1;
+    max-height: 1000px;
+  }
+
+  summary {
+    cursor: pointer;
+    padding: 0 2rem 0 2rem;
+
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  .flex {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .Snirkel {
+    width: 20px;
+    height: auto;
+  }
+
+  @media (min-width: 801px) {
+    summary {
+      padding: 0;
+    }
+
+    .Accordion {
+      max-width: 500px;
+    }
+
+    .content {
+      padding-left: 2rem;
+    }
+  }
+</style>
