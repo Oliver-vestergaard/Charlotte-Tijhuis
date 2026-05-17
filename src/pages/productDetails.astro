@@ -1,5 +1,101 @@
 ---
 import Layout from "../layout/Layout.astro";
+import { Image } from "astro:assets";
+import CardButton from "../components/CardButton.astro";
+import product from "../assets/imgMenu/armband.png";
+import Acoordian from "../components/Acoordian.astro";
+import Snirkel from "../assets/imgProductDetails/Snirkel5.png";
 ---
 
-<Layout title="Produckt Details" />
+<Layout title="Produckt Details">
+  <section class="grid_1-1">
+    <div>
+      <Image class="productImg" src={product} width={200} format="webP" alt="Menu Kategori Ringe" />
+      <Image class="productImg" src={product} width={200} format="webP" alt="Menu Kategori Ringe" />
+    </div>
+    <div>
+      <div class="PrimaryDescription">
+        <h2 class="HeadlineStyle">SmykkeNavn</h2>
+        <p>Matriale</p>
+        <p>Pris</p>
+
+        <div class="ButtonWrapper">
+          <CardButton text="Reserver" />
+        </div>
+
+        <h3>Detaljer</h3>
+      </div>
+
+      <article class="Accordion_container">
+        <Acoordian title="Fragt" overskrift="Fragt:" content="
+Smykker sendes ikke med fragt, da flere forhold spiller ind. I stedet afhentes de i butikken, så vi sammen kan sikre, at alt er som det skal være – at smykket passer korrekt, og at der ikke opstår misforståelser omkring farver og nuancer, som kan forvrænges af kamera og skærm.
+Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang er vigtig. På den måde sikres en tryg proces, god kommunikation og et resultat, hvor du forlader butikken tilfreds med dit køb." />
+        <Acoordian title="Produkt fremstilling" overskrift="Tid" content="Kom gerne i god tid inden en anledning, hvor du skal give en gave, eller bare gerne vil have smykket til en bestemt dato. Alle smykkerne er håndlavet af Joanna og mig, og derfor tager det længere tid end store smykkevirksomheder. " />
+        <Acoordian title="Beskrivelse" overskrift="Materiale" content="Materiale bla. bla." overskrift2="Låstype" content2="Låstype bla. bla." />
+      </article>
+    </div>
+  </section>
+</Layout>
+<style>
+  /******* MOBIL  *********/
+
+  .productImg {
+    width: 350px;
+    margin: 0 auto;
+    border: 2px solid black;
+  }
+  .PrimaryDescription {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .PrimaryDescription h2 {
+    margin-top: 3rem;
+  }
+  .PrimaryDescription p {
+    margin: 1rem;
+  }
+  .PrimaryDescription h3 {
+    margin-top: 2rem;
+  }
+
+  .ButtonWrapper {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .Accordion_container {
+    margin: 2rem auto;
+    overflow: hidden;
+    max-width: 25rem;
+  }
+
+  @media (min-width: 801px) {
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin: 5rem 4rem 0 4rem;
+    }
+
+    .productImg {
+      width: 500px;
+    }
+    .PrimaryDescription {
+      text-align: left;
+      margin-top: 0;
+    }
+
+    .Accordion_container {
+      max-width: 1000px;
+    }
+    .ButtonWrapper {
+      margin: 2rem 0 0 0;
+    }
+
+    .PrimaryDescription h2 {
+      margin-top: 0rem;
+    }
+  }
+</style>
