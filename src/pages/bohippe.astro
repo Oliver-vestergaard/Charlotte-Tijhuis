@@ -2,6 +2,90 @@
 import Layout from "../layout/Layout.astro";
 ---
 
-<Layout title="Bohippe">
-  <Layout />
+<Layout title="Bohippie">
+
+<section class="heroimg">
+<img src="src/assets/imgBohhipie/bohippiehero.jpg" alt="">
+</section>
+
+<section class="afsnit1">
+  <h4>“Uhøjtidelige luksus smykker”</h4>
+  <img src="src/assets/imgBohhipie/bohippie2.svg" alt="illustration af hånd">
+  <p class="p1">Bohippie er mit frie smykkeunivers - en mere uhøjtidelig og legende forlængelse af mit arbejde som guldsmed. Her er der plads til det vilde, det skæve og det farverige, uden at det behøver at tage sig selv så højtideligt. Det er smykker med personlighed, energi og masser af kreativ frihed.
+Faktisk begyndte Bohippie længe før min karriere som guldsmed. Jeg blev fascineret af knyttede smykker på rejser i Asien - små boheme-inspirerede smykker lavet med snore, sten og detaljer i ædelmaterialer. Da et af smykkerne gik i stykker, fik jeg lyst til selv at lære håndværket bag. Og det greb mig fuldstændig. Processen med at skabe noget med hænderne, lege med former, farver og materialer og se et kreativt produkt tage form blev starten på hele mit univers.
+Bohippie er i dag mit kreative frirum. Et sideprojekt ved siden af guldsmedearbejdet, hvor jeg kan eksperimentere mere frit og lade det lidt skøre og spontane fylde. Smykkerne er primært lavet med knytning, ædelsten og særlige perler fundet rundt omkring på mine rejser. Her handler det ikke om perfektion, men om stemning, personlighed og glæden ved det håndlavede.
+Jeg elsker at rejse, og derfor er Bohippie også blevet en måde at kombinere mine passioner på. Jeg søger hele tiden efter små lokale håndværkere og unikke materialer rundt omkring i verden, som kan inspirere mig eller blive en del af mine designs og samarbejder.
+Bohippie henvender sig til dem, der gerne vil have noget anderledes, personligt og lidt mere flippet - uden at skulle op i den helt høje prisklasse. Det er uhøjtidelig luksus med kant, farver og frihed.</p>
+</section>
+
+<section class="grid_2">
+<img src="src/assets/imgBohhipie/bohippieimg3.jpg" alt="Billede af bohippie smykker">
+<img src="src/assets/imgBohhipie/bohippieimg4.jpg" alt="Billede fra butikken">
+</section>
+
+<section class="afsnit1">
+  <h4>“Doing what you like, it is freedom”</h4>
+  <img src="src/assets/imgBohhipie/bohhipie5.svg" alt="Illustration af lotusblomst">
+
+</section>
+
 </Layout>
+
+
+
+
+
+<style>
+.hero {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.afsnit1 {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.afsnit1 img {
+    width: 70px;
+    place-self: center;
+}
+
+.p1{
+  margin-top: 2rem;
+}
+
+.grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.grid_2 img {
+    width: 100%;
+    height: 200px;  
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 800px) {
+
+    .afsnit1 img {
+      width: 120px;
+    }
+
+    .grid_2 img {
+    height: 500px;
+}
+  }
+
+</style>
