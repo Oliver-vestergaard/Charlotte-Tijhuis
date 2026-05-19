@@ -14,7 +14,7 @@ import Layout from "../layout/Layout.astro";
 </div>
 
 <div class="grid_1-1">
-    <div class="ptekst">
+    <div class="ptekst2">
         <h2>Autentisk og upoleret</h2>
         <p>Jeg elsker det upolerede og autentiske — for mig behøver noget ikke være perfekt for at være smukt. Som jeg ofte siger:“Tag øjeblikket og gør det perfekt.I dag driver jeg butikken sammen med Joana, som med sin kreativitet og varme er blevet en vigtig del af universet. Sammen ønsker vi at skabe et nærværende rum med plads til personlighed, håndværk og smykker med betydning.</p>
     </div>
@@ -22,7 +22,7 @@ import Layout from "../layout/Layout.astro";
 </div>
 
 <div class="galleri">
-    <h2>Min Smykkerejse</h2>
+    <h2 class="overskrift3">Min Smykkerejse</h2>
     <div class="galleri-grid">
         <img src="src/assets/imgOmOs/omospic3.jpg" alt="Billede fra indien1">
         <img src="src/assets/imgOmOs/omospic4.jpg" alt="Billede fra indien2">
@@ -51,17 +51,30 @@ import Layout from "../layout/Layout.astro";
     display: block;
 }
 
-.ptekst {
+.ptekst  {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+.ptekst2  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3rem;
+}
+
 
 .pink-bg .ptekst {
     background-color: #d9868f;
     padding: 3rem;
 }
 
+
+.overskrift3{
+    margin-right: 6rem;
+    text-align: end;
+}
 .galleri-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
