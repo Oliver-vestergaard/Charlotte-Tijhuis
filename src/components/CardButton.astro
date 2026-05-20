@@ -3,7 +3,7 @@ import "../style/global.css";
 const { text, id } = Astro.props;
 ---
 
-<a href={`/productDetails/${id}`}>
+<a href={`/productDetails?id=${id}`}>
   <div class="btn_wrapper">
     <button class="btn sort_btn">
       {text}
