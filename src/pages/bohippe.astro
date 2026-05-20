@@ -29,10 +29,19 @@ Bohippie henvender sig til dem, der gerne vil have noget anderledes, personligt 
 
 </section>
 
+<section class="grid">
+  <img src="src/assets/imgBohhipie/bohippieimg5.jpg" alt="Billede af flere bohippie smykker">
+
+  <div>
+    <p class="gridtekst">
+      Knytteuniverset handler for mig ikke kun om smykker – det handler også om mennesker, kreativitet og fællesskab. Gennem mine rejser har jeg mødt små kunsthåndværkere og kreative sjæle rundt omkring i verden, som arbejder med helt særlige teknikker og traditioner inden for knytning og håndværk.
+Derfor betyder det meget for mig at skabe sociale og økonomiske samarbejder med mindre håndværkere, hvor vi kan inspirere hinanden og skabe noget sammen. Flere af dem arbejder med helt andre måder at knytte på, kombinere materialer og indarbejde ædelsten i smykkerne, hvilket giver nye og anderledes udtryk i Bohippie-universet.
+For mig giver det mening at støtte små kreative håndværk og mennesker, der brænder for det, de laver. Jeg elsker tanken om, at smykkerne ikke bare bærer på sten og materialer, men også på historier, hænder og kulturer fra forskellige steder i verden
+    </p>
+  </div>
+</section>
+
 </Layout>
-
-
-
 
 
 <style>
@@ -77,6 +86,22 @@ Bohippie henvender sig til dem, der gerne vil have noget anderledes, personligt 
     display: block;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.grid img {
+  width: 200px;
+  justify-self: center;
+  margin-bottom: 5rem;
+}
+
+.gridtekst{
+  text-align: center;
+  margin-right: 1.5rem;
+}
 @media (min-width: 800px) {
 
     .afsnit1 img {
@@ -85,7 +110,12 @@ Bohippie henvender sig til dem, der gerne vil have noget anderledes, personligt 
 
     .grid_2 img {
     height: 500px;
-}
+    }
+    .grid img {
+  width: 300px;
+   margin-left: 15rem;
+
   }
+}
 
 </style>
