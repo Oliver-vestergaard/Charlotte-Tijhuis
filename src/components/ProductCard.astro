@@ -27,39 +27,41 @@ const { title, price, image, hoverImage, id } = Astro.props;
     overflow: hidden;
   }
 
-  /* stacker images*/
   .image_wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; /* højde */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
   }
 
-  /* begge images er stacked */
   .card-image {
     position: absolute;
     inset: 0;
-    width: 80%;
-    height: 80%;
     object-fit: cover;
     display: block;
-    margin: 0 auto;
     transition: opacity 0.3s ease;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
   }
 
-  /* default img */
+  @media (min-width: 800px) {
+    .card-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .card-image.default {
     opacity: 1;
     z-index: 1;
   }
 
-  /* hover hidden */
   .card-image.hover {
     opacity: 0;
     z-index: 2;
   }
 
-  /* hover effekt */
   .image_wrapper:hover .hover {
     opacity: 1;
   }
@@ -75,6 +77,14 @@ const { title, price, image, hoverImage, id } = Astro.props;
     margin: 10px auto 0 auto;
     margin-top: -4rem;
     margin-bottom: 3rem;
+  }
+
+  @media (min-width: 800px) {
+    .card_content {
+      width: 100%;
+      margin-top: 10px;
+      gap: 6px;
+    }
   }
 
   .card_content h2 {
@@ -94,78 +104,5 @@ const { title, price, image, hoverImage, id } = Astro.props;
     color: var(--text-color);
     margin: 0;
     font-size: 0.9rem;
-  }
-
-  @media (min-width: 800px) {
-    .product_card {
-      max-width: 320px;
-      overflow: hidden;
-    }
-
-    /* stacker images*/
-    .image_wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1 / 1; /* højde */
-      overflow: hidden;
-    }
-
-    /* begge images er stacked */
-    .card-image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.3s ease;
-    }
-
-    /* default img */
-    .card-image.default {
-      opacity: 1;
-      z-index: 1;
-    }
-
-    /* hover hidden */
-    .card-image.hover {
-      opacity: 0;
-      z-index: 2;
-    }
-
-    /* hover effekt */
-    .image_wrapper:hover .hover {
-      opacity: 1;
-    }
-
-    .image_wrapper:hover .default {
-      opacity: 0;
-    }
-
-    .card_content {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .card_content h2 {
-      font-family: Gowun Batang;
-      margin: 0;
-      font-size: 1.1rem;
-    }
-
-    .price_row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .card_content p {
-      font-family: Gowun Batang;
-      color: var(--text-color);
-      margin: 0;
-      font-size: 0.9rem;
-    }
   }
 </style>
