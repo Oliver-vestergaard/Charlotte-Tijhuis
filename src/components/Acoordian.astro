@@ -23,16 +23,25 @@ const { title, content, overskrift, overskrift2, content2 } = Astro.props;
 </details>
 
 <style>
+  hr {
+    width: 700px;
+  }
+
   .Bold {
     font-weight: bold;
     margin: 0rem;
+    text-align: left;
   }
   .Accordion {
-    max-width: 400px;
+    width: 400px;
+  }
+
+  .content p {
+    text-align: left;
   }
 
   .content {
-    padding-left: 4rem;
+    padding-left: 3rem;
     margin-bottom: 2rem;
     opacity: 0;
     max-height: 0;
@@ -46,12 +55,11 @@ const { title, content, overskrift, overskrift2, content2 } = Astro.props;
 
   .Accordion[open] .content {
     opacity: 1;
-    max-height: 1000px;
+    max-height: 500px;
   }
 
   summary {
     cursor: pointer;
-    padding: 0 2rem 0 2rem;
 
     list-style: none;
     margin-bottom: 1rem;
@@ -59,7 +67,7 @@ const { title, content, overskrift, overskrift2, content2 } = Astro.props;
   .flex {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
     align-items: center;
   }
   .Snirkel {

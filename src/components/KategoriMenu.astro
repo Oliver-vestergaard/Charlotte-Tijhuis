@@ -39,28 +39,27 @@ import "../style/global.css";
       Herre
     </a>
   </li>
-
-  <style>
-    .dropdown-menu {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      position: absolute;
-      gap: 5rem;
-      padding: 2rem;
-      background: var(--section-color);
-
-      border: 2px solid var(--footer-color);
-    }
-
-    .dropdown-menu li a {
-      color: var(--text-color);
-    }
-    li {
-      list-style: none;
-      text-align: center;
-    }
-    a {
-      text-decoration: none;
-    }
-  </style>
 </ul>
+<style>
+  .dropdown-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    gap: 5rem;
+    padding: 2rem;
+    background: var(--section-color);
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .dropdown-menu li a {
+    color: var(--text-color);
+  }
+  li {
+    list-style: none;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
