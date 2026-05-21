@@ -5,12 +5,13 @@ const { title, price, image, hoverImage, id } = Astro.props;
 ---
 
 <div class="product_card">
-  <div class="image_wrapper">
-    {image && <img src={image} alt={title} class="card-image default" />}
+  <a href={`/productDetails?id=${id}`}>
+    <div class="image_wrapper">
+      {image && <img src={image} alt={title} class="card-image default" />}
 
-    {hoverImage && <img src={hoverImage} alt={title} class="card-image hover" />}
-  </div>
-
+      {hoverImage && <img src={hoverImage} alt={title} class="card-image hover" />}
+    </div>
+  </a>
   <div class="card_content">
     <h2>{title}</h2>
 
