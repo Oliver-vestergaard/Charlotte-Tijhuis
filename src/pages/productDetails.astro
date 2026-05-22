@@ -36,13 +36,12 @@ const product = data?.[0];
   <section class="sectionWrapper">
     <section class="grid_1-1">
       <div>
-        <!-- <Image class="productImg" src={product.image} width={200} format="webP" alt="Menu Kategori Ringe" />
-      <Image class="productImg" src={product.image} width={200} format="webP" alt="Menu Kategori Ringe" /> -->
+       
         <img class="productImg" src={product.produktimage} alt={`billede af produktet ${product.smykkenavn}`} />
         <img class="productImg" src={product.produkthover} alt={`billede af produktet båret på ${product.smykkenavn}`} />
       </div>
-      <!-- 
-      <section class="Information"> -->
+     
+    
       <section>
         <div class="PrimaryDescription">
           <h2 class="HeadlineStyle">{product.smykkenavn}</h2>
@@ -141,10 +140,7 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
           margin-top: 0;
         }
 
-        /* .Information {
-      position: sticky;
-      top: 10rem;
-    } */
+  
 
         .Accordion_container {
           max-width: 1000px;
