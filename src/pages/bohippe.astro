@@ -42,6 +42,12 @@ import Layout from "../layout/Layout.astro";
     </p>
   </section>
 
+  <img
+    class="akvaral1"
+    src="src/assets/imgBohhipie/akvaral1.webp"
+    alt="Akvaral1"
+  />
+
   <section class="grid_2">
     <img
       src="src/assets/imgBohhipie/bohippieimg3.jpg"
@@ -85,7 +91,6 @@ import Layout from "../layout/Layout.astro";
         på sten og materialer, men også på historier, hænder og kulturer fra forskellige
         steder i verden
       </p>
-      <p>hej med dig</p>
     </div>
   </section>
 </Layout>
@@ -152,6 +157,15 @@ import Layout from "../layout/Layout.astro";
   .gridtekst {
     margin-right: 1.5rem;
   }
+
+  .akvaral1 {
+    position: absolute;
+    top: 260%;
+    left: 60%;
+    width: 30%;
+    z-index: -1;
+  }
+
   @media (min-width: 800px) {
     .afsnit1 img {
       width: 120px;
@@ -163,6 +177,13 @@ import Layout from "../layout/Layout.astro";
     .grid img {
       width: 300px;
       margin-left: 15rem;
+    }
+    .akvaral1 {
+      position: absolute;
+      top: 190%;
+      left: 60%;
+      width: 30%;
+      z-index: -1;
     }
   }
 </style>
