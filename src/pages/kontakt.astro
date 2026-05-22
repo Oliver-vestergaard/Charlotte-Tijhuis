@@ -51,6 +51,12 @@ import Layout from "../layout/Layout.astro";
     </div>
 
     <style>
+.grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
       .kontakt_tekst {
         line-height: 1.6;
         max-width: 65ch;
@@ -74,7 +80,8 @@ import Layout from "../layout/Layout.astro";
         margin-top: 1rem;
       }
       .tekstboks {
-        width: 500px;
+        width: 100%;
+        max-width: 500px;
         height: 250px;
         border-radius: 15px;
         border: 1px solid black;
@@ -111,7 +118,7 @@ import Layout from "../layout/Layout.astro";
         padding: 40px 30px;
         width: 300px;
         margin-left: 2rem;
-        margin-bottom: 5rem;
+  
       }
 
       .butikinfo {
@@ -130,11 +137,13 @@ import Layout from "../layout/Layout.astro";
 
         .grid {
           display: flex;
+      flex-direction: row;
+
         }
 
         .kontaktinfo {
           width: 400px;
-          margin-left: 8rem;
+          margin-left: 6rem;
         }
       }
     </style>
