@@ -32,6 +32,8 @@ import SocialMedia from "../components/SocialMedia.astro";
 <style>
   .footerSection {
     background-color: var(--section-color);
+    margin-top: 7rem;
+    
   }
   .footer {
     display: grid;
@@ -56,10 +58,19 @@ import SocialMedia from "../components/SocialMedia.astro";
     background-color: black;
     height: 2px;
   }
-  @media (min-width: 801px) {
-    .kontaktLinks a {
-      font-size: 30px;
+
+.footerSection h3 {
+      font-size: 11px;
     }
+
+  @media (min-width: 801px) {
+   
+    
+    
+.footerSection h3 {
+      font-size: 25px;
+    }
+
 
     .kontaktLinks {
       gap: 1rem;
