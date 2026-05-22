@@ -17,7 +17,8 @@ const { title, price, image, hoverImage, id } = Astro.props;
 
     <div class="price_row">
       <p>{price}</p>
-      <CardButton text="Læs mere" id={id} />
+      <CardButton text="Læs mere"
+  href={`/productDetails?id=${id}`} />
     </div>
   </div>
 </div>
