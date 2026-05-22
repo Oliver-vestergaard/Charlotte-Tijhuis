@@ -1,15 +1,27 @@
 ---
 import "../style/global.css";
-const { text, id } = Astro.props;
+
+const {
+  text,
+  href = null
+} = Astro.props;
 ---
 
-<a href={`/productDetails?id=${id}`}>
+{href ? (
+  <a href={href}>
+    <div class="btn_wrapper">
+      <button class="btn sort_btn">
+        {text}
+      </button>
+    </div>
+  </a>
+) : (
   <div class="btn_wrapper">
     <button class="btn sort_btn">
       {text}
     </button>
   </div>
-</a>
+)}
 
 <style>
   .btn_wrapper {
