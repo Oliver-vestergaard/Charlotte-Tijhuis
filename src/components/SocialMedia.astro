@@ -8,10 +8,13 @@ const { SocialMediaTekst } = Astro.props;
 
 <div class="SoMe">
   <h3>{SocialMediaTekst}</h3>
-  <Image class="SocialsImg" src={Insta} width={75} format="webP" alt="Link til Instagram" />
-  <Image class="SocialsImg" src={Facebook} width={75} format="webP" alt="Link til Facebook" />
+  <a href="">
+    <Image class="SocialsImg" src={Insta} width={75} format="webP" alt="Link til Instagram" />
+  </a>
+  <a href="">
+    <Image class="SocialsImg" src={Facebook} width={75} format="webP" alt="Link til Facebook" />
+  </a>
 </div>
-
 <style>
   .SocialsImg {
     width: 25px;
