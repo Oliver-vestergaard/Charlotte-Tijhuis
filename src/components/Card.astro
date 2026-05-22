@@ -1,0 +1,53 @@
+---
+const { text, image, title } = Astro.props;
+---
+
+<section class="cardkomponent">
+  <div class="card1">
+    <p>{text}</p>
+  </div>
+
+  <img src={image} alt={title} />
+</section>
+
+<style>
+  .cardkomponent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5rem;
+  }
+
+  .card1,
+  img {
+    height: 180px;
+  }
+
+  .card1 {
+    background-color: #ffe3c4;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .card1 p {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 800px) {
+    .card1 {
+      height: auto;
+      padding: 1.5rem;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+</style>
