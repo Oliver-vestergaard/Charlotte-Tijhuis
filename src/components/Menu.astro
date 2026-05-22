@@ -9,11 +9,12 @@ import KategoriMenu from "../components/KategoriMenu.astro";
       <li>
         <a id="btn" href="">Smykker</a>
         <ul class="MobilKategoriMenu">
-          <li><a href="productList?kategori=orering">Ørering</a></li>
-          <li><a href="productList?kategori=ring">Ring</a></li>
-          <li><a href="productList?kategori=herre">Herre</a></li>
-          <li><a href="productList?kategori=armband">Armbånd</a></li>
-          <li><a href="productList?kategori=halskaede">Halskæde</a></li>
+          <li><a href="/productList?kategori=orering">Ørering</a></li>
+          <li><a href="/productList?kategori=ring">Ring</a></li>
+          <li><a href="/productList?kategori=herre">Herre</a></li>
+          <li><a href="/productList?kategori=armband">Armbånd</a></li>
+          <li><a href="/productList?kategori=halskaede">Halskæde</a></li>
+            <li><a href="/productList">Signatur</a></li>
         </ul>
       </li>
 
@@ -118,6 +119,7 @@ import KategoriMenu from "../components/KategoriMenu.astro";
     display: block;
     position: absolute;
     top: 100px;
+    z-index: 100;
     right: 0;
     width: 100%;
     height: auto;
