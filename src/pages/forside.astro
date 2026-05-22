@@ -2,6 +2,7 @@
 import Card from "../components/Card.astro";
 import CardButton from "../components/CardButton.astro";
 import Layout from "../layout/Layout.astro";
+import CtaButton from "../components/CtaButton.astro";
 ---
 
 <Layout title="Forside">
@@ -10,7 +11,7 @@ import Layout from "../layout/Layout.astro";
     <section class="skriftogknap">
       <h2 class="overskrift1">Nøje udvalgte smykker</h2>
       <div class="knapwrapper">
-        <CardButton text="Se signatursmykker" href={`/productList`} />
+        <CtaButton text="Se signatursmykker" href={`/productList`} />
       </div>
   
     </section>
@@ -177,9 +178,10 @@ import Layout from "../layout/Layout.astro";
 
       .grid2 {
         display: flex;
-        margin: 0 auto;
         gap: 20px;
         padding: 5px 10px;
+        justify-content: center;
+       
       }
 
       .anmeldelse {
@@ -235,7 +237,8 @@ import Layout from "../layout/Layout.astro";
         }
 
         .tekst2 {
-          padding: 7rem;
+          margin-top: 2rem ;
+          padding: 3rem;
         }
 
         .bundbillede {
