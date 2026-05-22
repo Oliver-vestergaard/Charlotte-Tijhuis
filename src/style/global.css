@@ -18,6 +18,7 @@ h1 {
   font-style: normal;
   font-size: 36px;
   color: var(--text-color);
+  text-align: center;
 }
 
 h2 {
