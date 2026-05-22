@@ -22,11 +22,11 @@ import Layout from "../layout/Layout.astro";
         rejser — særligt i Asien og Indien — fandt jeg inspiration i kulturerne,
         farverne og de organiske former. Jeg begyndte at tage perler og ædelsten
         med hjem, som blev en del af mine første designs og fundamentet for det
-        univers, jeg arbejder i i dag. Som 42-årig valgte jeg at følge min
-        passion og begyndte i lære som guldsmed. Kort tid efter åbnede jeg min
-        egen butik i Hillerød. Her arbejder jeg i dag med ægte materialer som
-        guld og sølv og skaber smykker inspireret af naturen, symbolik og
-        historierne, mennesker bærer med sig.
+        univers, jeg arbejder i i dag. <br /><br /> Som 42-årig valgte jeg at følge
+        min passion og begyndte i lære som guldsmed. Kort tid efter åbnede jeg min
+        egen butik i Hillerød. Her arbejder jeg i dag med ægte materialer som guld
+        og sølv og skaber smykker inspireret af naturen, symbolik og historierne,
+        mennesker bærer med sig.
       </p>
     </div>
   </section>
@@ -36,11 +36,11 @@ import Layout from "../layout/Layout.astro";
       <h2 class="overskrift2">Autentisk og upoleret</h2>
       <p>
         Jeg elsker det upolerede og autentiske — for mig behøver noget ikke være
-        perfekt for at være smukt. Som jeg ofte siger: “Tag øjeblikket og gør
-        det perfekt.” I dag driver jeg butikken sammen med Joana, som med sin
-        kreativitet og varme er blevet en vigtig del af universet. Sammen ønsker
-        vi at skabe et nærværende rum med plads til personlighed, håndværk og
-        smykker med betydning.
+        perfekt for at være smukt. <br /><br /> Som jeg ofte siger: “Tag øjeblikket
+        og gør det perfekt.” I dag driver jeg butikken sammen med Joana, som med sin
+        kreativitet og varme er blevet en vigtig del af universet. Sammen ønsker vi
+        at skabe et nærværende rum med plads til personlighed, håndværk og smykker
+        med betydning.
       </p>
     </div>
 
@@ -70,17 +70,18 @@ import Layout from "../layout/Layout.astro";
       og silke af små familiedrevne virksomheder i Indien og skabt til at kunne
       bruges igen og igen. Derfor betyder det meget for mig at skabe sociale og
       økonomiske samarbejder med mindre håndværkere, hvor vi kan inspirere
-      hinanden og skabe noget sammen. Hvert år rejser jeg selv til Indien i
-      flere måneder for at skabe tætte samarbejder, finde unikke sten og hente
-      inspiration i landets farver og kultur. Det giver mig mulighed for at
-      skabe smykker med særlige sten og detaljer, som gør hvert smykke mere
-      unikt og personligt. For mig er det vigtigt at støtte små familier og
-      lokale håndværkere, så hvert smykke bliver en del af en større historie –
-      med personlighed, omtanke og kærlighed til det unikke håndværk.
+      hinanden og skabe noget sammen. <br />
+      <br />Hvert år rejser jeg selv til Indien i flere måneder for at skabe
+      tætte samarbejder, finde unikke sten og hente inspiration i landets farver
+      og kultur. Det giver mig mulighed for at skabe smykker med særlige sten og
+      detaljer, som gør hvert smykke mere unikt og personligt. For mig er det
+      vigtigt at støtte små familier og lokale håndværkere, så hvert smykke
+      bliver en del af en større historie – med personlighed, omtanke og
+      kærlighed til det unikke håndværk.
     </p>
   </section>
 
-  <h2>Et glimt fra værkstedet</h2>
+  <h2 class="overskrift4">Et glimt fra værkstedet</h2>
   <Card
     text="Alle mine smykker er håndlavede og skabt med fokus på detaljer og personlighed. Jeg laver både unikke designs efter bestilling og arbejder også med omsmeltning, hvor gamle smykker får nyt liv i en ny form. I butikken finder du også udstillede smykker, som er mine egne håndlavede designs. Kig gerne forbi, hvis du har lyst til en snak om idéer, redesign eller et helt særligt smykke skabt kun til dig."
     image="src/assets/imgOmOs/vaerkstedimg.webp"
@@ -95,7 +96,7 @@ import Layout from "../layout/Layout.astro";
     gap: 0;
 
     align-items: stretch;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
   }
 
   .grid_1-1 img {
@@ -123,18 +124,24 @@ import Layout from "../layout/Layout.astro";
     padding: 3rem;
   }
 
+  .overskrift2 {
+    text-align: center;
+  }
+
   .overskrift3 {
     margin-right: 6rem;
     text-align: end;
   }
+
+  .overskrift4 {
+    margin-left: 1rem;
+    margin-top: 3rem;
+  }
+
   .galleri-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-  }
-
-  .overskrift2 {
-    text-align: center;
   }
 
   .galleri-grid img {
@@ -146,6 +153,7 @@ import Layout from "../layout/Layout.astro";
 
   .galleri-p {
     place-self: center;
+    padding: 1rem;
   }
 
   /*dekstop*/
@@ -154,6 +162,8 @@ import Layout from "../layout/Layout.astro";
       grid-template-columns: 1fr 1fr;
       gap: 0;
       align-items: stretch;
+      margin-top: 10rem;
+      margin-bottom: 10rem;
     }
 
     .grid_1-1 img {
@@ -170,6 +180,15 @@ import Layout from "../layout/Layout.astro";
     .galleri-grid img {
       width: 100%;
       height: 280px;
+    }
+
+    .overskrift4 {
+      margin-left: 2rem;
+      margin-top: 7rem;
+    }
+
+    .galleri-p {
+      padding: 3rem;
     }
   }
 </style>
