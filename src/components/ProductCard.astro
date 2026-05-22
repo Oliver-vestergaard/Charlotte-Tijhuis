@@ -27,6 +27,7 @@ const { title, price, image, hoverImage, id } = Astro.props;
   .product_card {
     max-width: 320px;
     overflow: hidden;
+    margin: 0 auto;
   }
 
   .image_wrapper {
@@ -47,6 +48,20 @@ const { title, price, image, hoverImage, id } = Astro.props;
     margin: 0 auto;
   }
 
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product_card {
+    margin: 0 auto;
+  }
+
+
+  .price_row {
+    justify-content: center;
+  }
+}
+
+  
   @media (min-width: 800px) {
     .card-image {
       width: 100%;
