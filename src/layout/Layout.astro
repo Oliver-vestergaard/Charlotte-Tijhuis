@@ -2,16 +2,17 @@
 import "../style/global.css";
 import Menu from "../components/Menu.astro";
 import Footer from "../components/Footer.astro";
-const { title } = Astro.props;
+const { title, pageClass } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -20,7 +21,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Coming+Soon&family=Gowun+Batang&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class={pageClass}>
     <header>
       <Menu />
     </header>

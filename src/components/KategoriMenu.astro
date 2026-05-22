@@ -5,6 +5,7 @@ import Armbånd from "../assets/imgMenu/armband.png";
 import Halskæde from "../assets/imgMenu/halskaede.png";
 import Ørering from "../assets/imgMenu/orering.png";
 import Herre from "../assets/imgMenu/herre.png";
+import Signatur from "../assets/imgMenu/Sol_menu.png";
 import "../style/global.css";
 ---
 
@@ -33,17 +34,24 @@ import "../style/global.css";
       Ørering
     </a>
   </li>
+
   <li>
     <a href="productList?kategori=herre">
       <Image class="kategoriImg" src={Herre} width={200} format="webP" alt="Menu Kategori Herre" />
       Herre
     </a>
   </li>
+  <li>
+    <a href="productList">
+      <Image class="kategoriImg" src={Signatur} width={200} format="webP" alt="Menu Kategori Signatur" />
+      Signatur
+    </a>
+  </li>
 </ul>
 <style>
   .dropdown-menu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     position: absolute;
     gap: 5rem;
     padding: 2rem;
