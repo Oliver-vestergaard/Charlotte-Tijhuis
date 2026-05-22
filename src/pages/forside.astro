@@ -1,4 +1,5 @@
 ---
+import Card from "../components/Card.astro";
 import CardButton from "../components/CardButton.astro";
 import Layout from "../layout/Layout.astro";
 ---
@@ -11,7 +12,9 @@ import Layout from "../layout/Layout.astro";
       <div class="knapwrapper">
         <CardButton text="Se signatursmykker" href={`/productList`} />
       </div>
+  
     </section>
+    </div>
     <div>
       <div class="tekst">
         <h2 class="h2tekst">Tidsløs elegance skabt med omtanke</h2>
@@ -31,6 +34,10 @@ import Layout from "../layout/Layout.astro";
       </div>
     </section>
 
+    <Card  text="Find dine nye favoritter blandt mine unikke bestseller-smykker, designet med omtanke, personlighed og smukke farver. Du har også mulighed for at designe dit eget smykke i samarbejde med mig, så det bliver præcis, som du ønsker."
+    image="src/assets/imgForside/forsidepic6.webp"
+    title="Billede af fire ringe" ></Card>
+
     <h2 class="h2tekst2">Tidsløse herresmykker med kant</h2>
 
     <div class="grid1-1">
@@ -47,12 +54,12 @@ import Layout from "../layout/Layout.astro";
     <section class="grid2">
       <div class="anmeldelse">
         <p>"Den bedste guldsmed, altid imødekommende, og kreativ ❤️."</p>
-        <p>-Joan Lund</p>
+        <p class="navn">-Joan Lund</p>
       </div>
 
       <div class="anmeldelse">
         <p>"Charlotte er en spændende og utraditionel guldsmed. Vil varmt anbefale."</p>
-        <p>-Michael Rögen</p>
+        <p class="navn">-Michael Rögen</p>
       </div>
     </section>
 
@@ -61,6 +68,7 @@ import Layout from "../layout/Layout.astro";
     <style>
       .video_knap {
         position: relative;
+        width: 100%;
         z-index: 1;
       }
 
@@ -72,18 +80,23 @@ import Layout from "../layout/Layout.astro";
 
       .skriftogknap {
         position: absolute;
-        top: 8%;
-        left: 8%;
-        z-index: 2;
+        top: 60%;
+         display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  gap: 10px;
+  z-index: 2;
+        
       }
 
       .overskrift1 {
-        color: #fff2ef;
-        margin-bottom: 0.5rem;
+        color: var(--background-color);
+        margin-bottom: 0 auto;
       }
 
       .knapwrapper {
-        position: absolute;
+        position: relative;
       }
 
       .tekst {
@@ -123,6 +136,7 @@ import Layout from "../layout/Layout.astro";
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        margin-bottom: 4rem;
       }
 
       .h2tekst2 {
@@ -162,10 +176,15 @@ import Layout from "../layout/Layout.astro";
       }
 
       .anmeldelse {
-        background-color: #ffe3c4;
+        background-color: var(--section-color);
         padding: 30px;
         width: 300px;
         margin-bottom: 1rem;
+      }
+
+      .navn{
+        margin-top: 1rem;
+        
       }
 
       .citat {
@@ -174,13 +193,13 @@ import Layout from "../layout/Layout.astro";
         padding: 2rem;
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: 800px){
         .h2tekst {
           margin-top: 8rem;
         }
 
         .skriftogknap {
-          top: 18%;
+          top: 70%;
         }
 
         .grid1-4 {
@@ -229,6 +248,10 @@ import Layout from "../layout/Layout.astro";
           margin-bottom: 4rem;
         }
       }
+
+ 
+    
+
     </style>
   </div>
 </Layout>
