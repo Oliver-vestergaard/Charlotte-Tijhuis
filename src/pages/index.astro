@@ -34,16 +34,14 @@ import "../style/global.css";
       ></a
     >
   </div>
-  <div class="grafisk_element">
-    <img src="src/assets/imgIndex/snirkel_03.webp" alt="snirkel_3" />
-  </div>
+
 
   <div class="index_container">
     <div class="index_content">
       <a href="/forside">
         <img src="src/assets/imgIndex/hus.webp" class="index_img" alt="hus_click_to_enter" />
       </a>
-      <h4 class="index_quote">"Kom og besøg mig på Helsingørsgade 3, i Hillerød!"</h4>
+      <h4 class="index_quote">"Kom og besøg min guldsmedeforretning på Helsingørsgade 3, i Hillerød!"</h4>
     </div>
   </div>
 
@@ -58,18 +56,6 @@ import "../style/global.css";
       width: 250px;
       height: auto;
       margin: 0 auto;
-    }
-
-    .grafisk_element {
-      width: 100vw;
-      margin-left: calc(50% - 50vw); /* re-center */
-    }
-
-    .grafisk_element img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top: -1.5rem;
     }
 
     .index_container {
@@ -111,19 +97,14 @@ import "../style/global.css";
     /*desktop*/
 
     @media (min-width: 800px) {
-      .grafisk_element img {
-        width: 80%;
-        margin-top: -7rem;
-      }
-
       .index_container {
         position: relative;
         overflow: visible;
       }
 
       .index_img {
-        width: 480px;
-        margin-top: -5rem;
+        max-width: 550px; 
+        margin-top: 1rem;
         transition: transform 0.3s ease;
       }
 
@@ -140,11 +121,9 @@ import "../style/global.css";
         top: 50%;
         left: calc(50% + 150px);
         transform: translateY(-50%);
-        font-size: 0.9rem;
+        font-size: 1.4rem;
         width: 200px;
       }
     }
   </style>
-
-
 </html>
