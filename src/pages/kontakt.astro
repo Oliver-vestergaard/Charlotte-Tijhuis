@@ -1,11 +1,13 @@
 ---
 import KortFormboks from "../components/KortFormboks.astro";
 import LangFormboks from "../components/LangFormboks.astro";
+import SocialMedia from "../components/SocialMedia.astro";
 import Layout from "../layout/Layout.astro";
 ---
 
 <Layout title="Kontakt">
   <h1>Kontakt</h1>
+  <p class="kontakt_tekst">I kan kontakte os her for reservation af smykker. Ved bestsellers bedes I oplyse ringstørrelse og model. Ved øvrige forespørgsler er I altid velkomne til at skrive, ringe eller besøge butikken og vores Instagram for at se flere håndlavede smykker.</p>
 
   <section class="sectionform">
     <div class="grid">
@@ -44,81 +46,97 @@ import Layout from "../layout/Layout.astro";
         </div>
 
         <h3>Følg med på:</h3>
+        <SocialMedia />
       </div>
     </div>
-  </section>
-</Layout>
 
-<style>
-  .sectionform {
-    display: grid;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+    <style>
+      .kontakt_tekst {
+        line-height: 1.6;
+        max-width: 65ch;
+        margin: 0 auto 2rem;
+      }
 
-  #forms {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px 20px;
-  }
+      .sectionform {
+        display: grid;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-  .kort {
-    margin-top: 1rem;
-  }
-  .tekstboks {
-    width: 500px;
-    height: 250px;
-    border-radius: 15px;
-    border: 1px solid black;
-    background-color: #eeeded;
-    padding: 10px;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-  }
+      #forms {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 20px;
+      }
 
-  .sendknap {
-    width: 140px;
-    height: 50px;
-    background-color: #5f2352;
-    color: white;
-    border: none;
-    font-size: 20px;
-    font-family: Gowun Batang;
-    cursor: pointer;
-    clip-path: polygon(12% 0%, 88% 0%, 100% 20%, 100% 80%, 88% 100%, 12% 100%, 0% 80%, 0% 20%);
-    margin-bottom: 5rem;
-  }
+      .kort {
+        margin-top: 1rem;
+      }
+      .tekstboks {
+        width: 500px;
+        height: 250px;
+        border-radius: 15px;
+        border: 1px solid black;
+        background-color: #eeeded;
+        padding: 10px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
 
-  .ptekst {
-    margin-bottom: 1rem;
-  }
+      .sendknap {
+        width: 140px;
+        height: 50px;
+        background-color: #5f2352;
+        color: white;
+        border: none;
+        font-size: 20px;
+        font-family: Gowun Batang;
+        cursor: pointer;
+        clip-path: polygon(12% 0%, 88% 0%, 100% 20%, 100% 80%, 88% 100%, 12% 100%, 0% 80%, 0% 20%);
+        margin-bottom: 5rem;
+      }
 
-  .kontaktinfo {
-    background-color: #eeeded;
-    padding: 40px 30px;
-    width: 300px;
-    margin-left: 2rem;
-    margin-bottom: 5rem;
-  }
+      .sendknap:hover {
+        background-color: #000000;
+        transition: 0.5 ease;
+      }
 
-  .butikinfo {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
+      .ptekst {
+        margin-bottom: 1rem;
+      }
 
-  .tider {
-    list-style: none;
-  }
+      .kontaktinfo {
+        background-color: #eeeded;
+        padding: 40px 30px;
+        width: 300px;
+        margin-left: 2rem;
+        margin-bottom: 5rem;
+      }
 
-  @media (min-width: 800px) {
-    .grid {
-      display: flex;
-    }
+      .butikinfo {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
 
-    .kontaktinfo {
-      width: 400px;
-      margin-left:;
-    }
-  }
-</style>
+      .tider {
+        list-style: none;
+      }
+
+      @media (min-width: 800px) {
+        .kontakt_tekst {
+          margin: 0 auto 10rem;
+        }
+
+        .grid {
+          display: flex;
+        }
+
+        .kontaktinfo {
+          width: 400px;
+          margin-left: 8rem;
+        }
+      }
+    </style>
+  </section></Layout
+>

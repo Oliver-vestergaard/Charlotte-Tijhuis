@@ -1,220 +1,234 @@
 ---
+import CardButton from "../components/CardButton.astro";
 import Layout from "../layout/Layout.astro";
 ---
 
 <Layout title="Forside">
   <div class="video_knap">
     <video class="video" autoplay muted loop playsinline src="/forsidevideo.mp4"> </video>
-    <div class="tekst_knap">
+    <section class="skriftogknap">
       <h2 class="overskrift1">Nøje udvalgte smykker</h2>
-      <a href="/productList">Se bestsellers</a>
-    </div>
-  </div>
-  <div>
-    <div class="tekst">
-      <h2 class="h2tekst">Tidsløs elegance skabt med omtanke</h2>
-      <p class="ptekst">I den lyserøde bygning på Helsingørsgade 3 i Hillerød finder du min guldsmedebutik — et sted fyldt med varme og passion, hvor mit håndværk bliver skabt fra bunden med sit autentiske udtryk og sans for organiske former. Her forenes tidløst design med ægte håndværk, og hvert smykke bliver skabt med omtanke, personlighed og fokus på kvalitet. Jeg tror på smykker, der ikke blot er smukke at bære, men som også fortæller en historie og kan følge dig gennem livet.</p>
-    </div>
-  </div>
-
-  <section class="grid1-4">
-    <img class="pic1" src="src/assets/imgForside/forsidepic1.webp" alt="Billede af en guldring bestående af 8 billianter" />
-    <h3 class="skrift">Se mine signatur smykker</h3>
-
-    <div class="grid1-2">
-      <img src="src/assets/imgForside/forside2pic.webp" alt="Billede af ring med stor lyserød brilliant" />
-      <img src="src/assets/imgForside/forside3pic.webp" alt="Billede af ring med stor grøn brilliant" />
-      <img src="src/assets/imgForside/forsidepic4.webp" alt="Billede af armbånd med grønne sten" />
-      <img src="src/assets/imgForside/forside5pic.webp" alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om" />
-    </div>
-  </section>
-
-  <h2 class="h2tekst2">Tidsløse herresmykker med kant</h2>
-
-  <div class="grid1-1">
-    <img class="topbillede" src="src/assets/imgForside/forsidepic7.webp" alt="Billede af to læderarmbånd med et kompas, den ene i sort og det andet i brunt" />
-    <img class="topbillede" src="src/assets/imgForside/forside8pic.jpg" alt="Billede af en herre sølv ring med et kompas" />
-    <div class="tekst2">
-      <p>Rustikke, rå og tidløse herresmykker i kvalitetsmaterialer. Laves på bestilling efter dine ønsker i sølv, guld eller læder. Herresmykkerne er til dig, der ønsker noget anderledes, råt og maskulint. Jeg håndgraverer i både sølv og guld, og motivet på læderarmbåndene kan tilpasses præcis efter dine ønsker.</p>
-    </div>
-    <img class="bundbillede" src="src/assets/imgForside/forsidepic9.webp" alt="Billede af et herrearmånd med forskellige grønne perler" />
-  </div>
-
-  <h3 class="skrift">Kundeudtalelser:</h3>
-
-  <section class="grid2">
-    <div class="anmeldelse">
-      <p>"Den bedste guldsmed, altid imødekommende, og kreativ ❤️."</p>
-      <p>-Joan Lund</p>
+      <div class="knapwrapper">
+        <CardButton text="Se signatursmykker" href={`/productList`} />
+      </div>
+    </section>
+    <div>
+      <div class="tekst">
+        <h2 class="h2tekst">Tidsløs elegance skabt med omtanke</h2>
+        <p class="ptekst">I den lyserøde bygning på Helsingørsgade 3 i Hillerød finder du min guldsmedebutik — et sted fyldt med varme og passion, hvor mit håndværk bliver skabt fra bunden med sit autentiske udtryk og sans for organiske former. Her forenes tidløst design med ægte håndværk, og hvert smykke bliver skabt med omtanke, personlighed og fokus på kvalitet. Jeg tror på smykker, der ikke blot er smukke at bære, men som også fortæller en historie og kan følge dig gennem livet.</p>
+      </div>
     </div>
 
-    <div class="anmeldelse">
-      <p>"Charlotte er en spændende og utraditionel guldsmed. Vil varmt anbefale."</p>
-      <p>-Michael Rögen</p>
+    <section class="grid1-4">
+      <img class="pic1" src="src/assets/imgForside/forsidepic1.webp" alt="Billede af en guldring bestående af 8 billianter" />
+      <h3 class="skrift">Se mine signatur smykker</h3>
+
+      <div class="grid1-2">
+        <img src="src/assets/imgForside/forside2pic.webp" alt="Billede af ring med stor lyserød brilliant" />
+        <img src="src/assets/imgForside/forside3pic.webp" alt="Billede af ring med stor grøn brilliant" />
+        <img src="src/assets/imgForside/forsidepic4.webp" alt="Billede af armbånd med grønne sten" />
+        <img src="src/assets/imgForside/forside5pic.webp" alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om" />
+      </div>
+    </section>
+
+    <h2 class="h2tekst2">Tidsløse herresmykker med kant</h2>
+
+    <div class="grid1-1">
+      <img class="topbillede" src="src/assets/imgForside/forsidepic7.webp" alt="Billede af to læderarmbånd med et kompas, den ene i sort og det andet i brunt" />
+      <img class="topbillede" src="src/assets/imgForside/forside8pic.jpg" alt="Billede af en herre sølv ring med et kompas" />
+      <div class="tekst2">
+        <p>Rustikke, rå og tidløse herresmykker i kvalitetsmaterialer. Laves på bestilling efter dine ønsker i sølv, guld eller læder. Herresmykkerne er til dig, der ønsker noget anderledes, råt og maskulint. Jeg håndgraverer i både sølv og guld, og motivet på læderarmbåndene kan tilpasses præcis efter dine ønsker.</p>
+      </div>
+      <img class="bundbillede" src="src/assets/imgForside/forsidepic9.webp" alt="Billede af et herrearmånd med forskellige grønne perler" />
     </div>
-  </section>
 
-  <h4 class="citat">“Hvis du ved hvordan du vil have det så kommer det til dig - der er altid en vej”</h4>
+    <h3 class="skrift">Kundeudtalelser:</h3>
 
-  <style>
-    .video_knap {
-      position: relative;
-    }
+    <section class="grid2">
+      <div class="anmeldelse">
+        <p>"Den bedste guldsmed, altid imødekommende, og kreativ ❤️."</p>
+        <p>-Joan Lund</p>
+      </div>
 
-    .video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+      <div class="anmeldelse">
+        <p>"Charlotte er en spændende og utraditionel guldsmed. Vil varmt anbefale."</p>
+        <p>-Michael Rögen</p>
+      </div>
+    </section>
 
-    .overskrift1 {
-      color: #fff2ef;
-    }
+    <h4 class="citat">“Hvis du ved hvordan du vil have det så kommer det til dig - der er altid en vej”</h4>
 
-    .tekst_knap {
-      position: absolute;
-      bottom: 10%;
-      left: 8%;
-    }
+    <style>
+      .video_knap {
+        position: relative;
+        z-index: 1;
+      }
 
-    .tekst {
-      padding: 50px;
-      margin: 0 auto;
-      max-width: 900px;
-    }
+      .video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    .h2tekst {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
+      .skriftogknap {
+        position: absolute;
+        top: 8%;
+        left: 8%;
+        z-index: 2;
+      }
 
-    .ptekst {
-      line-height: 1.6;
-      max-width: 65ch;
-      margin: 0 auto;
-    }
+      .overskrift1 {
+        color: #fff2ef;
+        margin-bottom: 0.5rem;
+      }
 
-    .grid1-4 {
-      margin: 0 auto;
-      padding: 0rem 3rem;
-    }
+      .knapwrapper {
+        position: absolute;
+      }
 
-    .pic1 {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
+      .tekst {
+        padding: 50px;
+        margin: 0 auto;
+        max-width: 900px;
+      }
 
-    .skrift {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .grid1-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .h2tekst2 {
-      margin-bottom: 2rem;
-      margin-top: 4rem;
-      text-align: center;
-    }
-    .grid1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .grid1-1 img {
-      object-fit: cover;
-      display: block;
-    }
-
-    .topbillede {
-      height: 150px;
-    }
-
-    .tekst2 {
-      padding: 1rem;
-      line-height: 1.6;
-    }
-
-    .bundbillede {
-      height: 150px;
-      margin-bottom: 4rem;
-    }
-
-    .grid2 {
-      display: flex;
-      margin: 0 auto;
-      gap: 20px;
-      padding: 5px 10px;
-    }
-
-    .anmeldelse {
-      background-color: #ffe3c4;
-      padding: 30px;
-      width: 300px;
-      margin-bottom: 1rem;
-    }
-
-    .citat {
-      text-align: center;
-      margin-bottom: 4rem;
-      padding: 2rem;
-    }
-
-    @media (min-width: 800px) {
       .h2tekst {
-        margin-top: 8rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .ptekst {
+        line-height: 1.6;
+        max-width: 65ch;
+        margin: 0 auto;
       }
 
       .grid1-4 {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 20px;
-        max-width: 1400px;
-        margin: auto;
-        padding: 40px;
+        margin: 0 auto;
+        padding: 0rem 3rem;
       }
 
       .pic1 {
-        grid-row: 1 / 4;
+        width: 100%;
+        margin-bottom: 2rem;
       }
+
       .skrift {
-        margin-top: 4rem;
-        grid-column: 2 / 4;
+        text-align: center;
+        margin-bottom: 1rem;
       }
 
       .grid1-2 {
-        grid-column: 2 / 4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .h2tekst2 {
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+      }
+      .grid1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .grid1-1 img {
+        object-fit: cover;
+        display: block;
       }
 
       .topbillede {
-        height: 370px;
+        height: 150px;
       }
 
       .tekst2 {
-        padding: 7rem;
+        padding: 1rem;
+        line-height: 1.6;
       }
 
       .bundbillede {
-        height: 370px;
-        margin-bottom: 5rem;
+        height: 150px;
+        margin-bottom: 4rem;
       }
 
       .grid2 {
         display: flex;
-        justify-content: center;
-        gap: 40px;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 5px 10px;
       }
 
       .anmeldelse {
-        width: 500px;
-        padding: 70px;
-        margin-bottom: 4rem;
+        background-color: #ffe3c4;
+        padding: 30px;
+        width: 300px;
+        margin-bottom: 1rem;
       }
-    }
-  </style>
+
+      .citat {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 2rem;
+      }
+
+      @media (min-width: 800px) {
+        .h2tekst {
+          margin-top: 8rem;
+        }
+
+        .skriftogknap {
+          top: 18%;
+        }
+
+        .grid1-4 {
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          gap: 20px;
+          max-width: 1400px;
+          margin: auto;
+          padding: 40px;
+        }
+
+        .pic1 {
+          grid-row: 1 / 4;
+        }
+        .skrift {
+          margin-top: 4rem;
+          grid-column: 2 / 4;
+        }
+
+        .grid1-2 {
+          grid-column: 2 / 4;
+        }
+
+        .topbillede {
+          height: 370px;
+        }
+
+        .tekst2 {
+          padding: 7rem;
+        }
+
+        .bundbillede {
+          height: 370px;
+          margin-bottom: 5rem;
+        }
+
+        .grid2 {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+        }
+
+        .anmeldelse {
+          width: 500px;
+          padding: 70px;
+          margin-bottom: 4rem;
+        }
+      }
+    </style>
+  </div>
 </Layout>
