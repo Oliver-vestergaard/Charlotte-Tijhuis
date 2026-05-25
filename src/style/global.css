@@ -16,7 +16,7 @@ h1 {
   font-family: "Aclonica", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 36px;
+  font-size: 2.25rem;
   color: var(--text-color);
   text-align: center;
   margin-top: 2rem;
@@ -26,7 +26,7 @@ h2 {
   font-family: "Gowun Batang", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
+  font-size: 1.125rem;;
   color: var(--text-color);
 }
 
@@ -34,7 +34,7 @@ h3 {
   font-family: "Gowun Batang", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--text-color);
 
 }
@@ -43,13 +43,13 @@ h4 {
   font-family: "Coming Soon", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--text-color);
 }
 
-a {
+a, button {
   font-family: "Gowun Batang", serif;
-  font-size: 11px;
+  font-size: 0.6875rem;;
   color: var(--text-color);
 }
 
@@ -59,13 +59,14 @@ ol {
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: normal;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-color);
   text-wrap: pretty;
 }
 
 p {
   max-width: 65ch;
+    line-height: 1.6;
 }
 
 /********* COLORS *********/
@@ -90,28 +91,28 @@ body {
 @media (min-width: 801px) {
   /****** FONT ******/
   h1 {
-    font-size: 80px;
+    font-size: 5rem;
   }
 
   h2 {
-    font-size: 45px;
+    font-size: 2.8125rem;
   }
 
   h3 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 
   h4 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 
   a {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 
   p,
   ul,
   ol {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }

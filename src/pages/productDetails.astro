@@ -1,8 +1,7 @@
 ---
 import Layout from "../layout/Layout.astro";
 import CtaButton from "../components/CtaButton.astro";
-import CardButton from "../components/CardButton.astro";
-import Acoordian from "../components/Acoordian.astro";
+import Accordion from "../components/Accordion.astro";
 
 export const prerender = false;
 
@@ -34,33 +33,34 @@ const product = data?.[0];
 
 <Layout title={product.smykkenavn}>
   <section class="sectionWrapper">
-    <section class="grid_1-1">
+    <div class="grid_1-1">
       <div>
        
-        <img class="productImg" src={product.produktimage} alt={`billede af produktet ${product.smykkenavn}`} />
-        <img class="productImg" src={product.produkthover} alt={`billede af produktet båret på ${product.smykkenavn}`} />
+        <img class="productImg" src={product.produktimage} alt={`Billede af Smykket: ${product.smykkenavn}`} />
+        <img class="productImg" src={product.produkthover} alt={`Billede af Smykket: ${product.smykkenavn} båret på `} />
       </div>
      
     
       <section>
         <div class="PrimaryDescription">
-          <h2 class="HeadlineStyle">{product.smykkenavn}</h2>
+          <h1 class="ProductTitle">{product.smykkenavn}</h1>
+          
           <p>{product.materiale}</p>
-          <p>{product.pris}</p>
+          <p class="price">{product.pris}</p>
 
-          <h3>Detaljer</h3>
+          <h2>Detaljer</h2>
         </div>
 
         <article class="Accordion_container">
-          <Acoordian title="Fragt" content="
+          <Accordion title="Fragt" content="
 Smykker sendes ikke med fragt, da flere forhold spiller ind. I stedet afhentes de i butikken, så vi sammen kan sikre, at alt er som det skal være – at smykket passer korrekt, og at der ikke opstår misforståelser omkring farver og nuancer, som kan forvrænges af kamera og skærm.
 Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang er vigtig. På den måde sikres en tryg proces, god kommunikation og et resultat, hvor du forlader butikken tilfreds med dit køb." />
 
-          <Acoordian title="Fremstilling" content="Kom gerne i god tid inden en anledning, hvor du skal give en gave, eller bare gerne vil have smykket til en bestemt dato. Alle smykkerne er håndlavet af Joanna og mig, og derfor tager det længere tid end store smykkevirksomheder. " />
+          <Accordion title="Fremstilling" content="Kom gerne i god tid inden en anledning, hvor du skal give en gave, eller bare gerne vil have smykket til en bestemt dato. Alle smykkerne er håndlavet af Joanna og mig, og derfor tager det længere tid end store smykkevirksomheder. " />
 
-          <Acoordian title="Beskrivelse" content={product.beskrivelse} content2={product.lock} />
+          <Accordion title="Beskrivelse" content={product.beskrivelse} content2={product.lock} />
         </article>
-        <div class="buttonText">
+        <div class="ReservationText">
           <p>Smykkerne på hjemmesiden fremstilles efter bestilling, så hvert smykke skabes med fokus på håndværk, detaljer og dine personlige ønsker.</p>
           <p class="bold">Kontakt mig gerne her, og fortæl om dine ønsker til smykket</p>
         </div>
@@ -68,41 +68,74 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
           <CtaButton class="btn" text="Reserver" href="/kontakt" />
         </div>
       </section>
-    </section>
+    </div>
+  </section>
 
-    <style>
-      /******* MOBIL  *********/
 
-      .buttonText p {
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom: 1rem;
+
+
+
+<style>
+/******* MOBIL  *********/
+
+/****** Text ******/
+
+.ProductTitle {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+.ReservationText p {
+ margin: 0 auto;
+ text-align: center;
+ margin-bottom: 1rem;
       }
       .bold {
         font-weight: bold;
       }
 
-      .sectionWrapper {
-        margin: 5rem 0 10rem 0;
-      }
-      .productImg {
-        width: 450px;
-        margin: 0 auto;
-      }
       .PrimaryDescription {
         text-align: center;
         margin-top: 2rem;
       }
 
-      .PrimaryDescription h2 {
+      .PrimaryDescription h1 {
         margin-top: 3rem;
       }
       .PrimaryDescription p {
         margin: 0 auto;
       }
-      .PrimaryDescription h3 {
-        margin-top: 2rem;
+      .PrimaryDescription h2 {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+   .price {
+        font-weight: 600;
       }
+/******** SECTIONS *********/
+
+
+
+      .sectionWrapper {
+        margin: 5rem 0 10rem 0;
+      }
+
+   .grid_1-1 {
+        margin: 5rem 0 5rem 0;
+      }
+
+      /******** IMAGES  *********/
+      .productImg {
+        width: 450px;
+        margin: 0 auto;
+      }
+      
+
+/******* BUTTONS ********/
 
       .ButtonWrapper {
         width: fit-content;
@@ -116,14 +149,40 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
         max-width: 25rem;
       }
 
-      .grid_1-1 {
-        margin: 5rem 0 5rem 0;
-      }
+   
+
+    /******* Desktop ********/
       @media (min-width: 801px) {
-        .buttonText p {
+
+
+
+        /****** Text ******/
+
+ .ProductTitle {
+    font-size: 45px;
+    text-align: left;
+  }
+
+
+        .ReservationText p {
           text-align: left;
         }
 
+
+             .PrimaryDescription h1 {
+          margin-top: 0rem;
+        }
+
+        .PrimaryDescription p {
+          margin: 1rem 0 0 0;
+        }
+
+
+ .PrimaryDescription {
+          text-align: left;
+          margin-top: 0;
+        }
+        /******** SECTIONS *********/
         .grid_1-1 {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -131,32 +190,25 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
           margin: 5rem 4rem 0 4rem;
         }
 
+    .Accordion_container {
+          max-width: 1000px;
+        }
+
+         /******** IMAGES  *********/
         .productImg {
           width: 100%;
           max-width: 500px;
         }
-        .PrimaryDescription {
-          text-align: left;
-          margin-top: 0;
-        }
+       
 
-  
 
-        .Accordion_container {
-          max-width: 1000px;
-        }
+    /******* BUTTONS ********/
         .ButtonWrapper {
           margin: 2rem 0 0 0;
         }
 
-        .PrimaryDescription h2 {
-          margin-top: 0rem;
-        }
-
-        .PrimaryDescription p {
-          margin: 1rem 0 0 0;
-        }
+   
       }
     </style>
-  </section>
+
 </Layout>
