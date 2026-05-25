@@ -7,7 +7,7 @@ import KategoriMenu from "../components/KategoriMenu.astro";
     <ul class="menu">
       <li><a href="/forside">Forside</a></li>
       <li>
-        <a id="btn" href="">Smykker</a>
+        <button id="btn"> Smykker</button>
         <ul class="MobilKategoriMenu">
           <li><a href="/productList?kategori=orering">Ørering</a></li>
           <li><a href="/productList?kategori=ring">Ring</a></li>
@@ -24,8 +24,8 @@ import KategoriMenu from "../components/KategoriMenu.astro";
     </ul>
   </nav>
 
-  <div class="logo">
-    <a href="/forside">
+  <div class="logo" >
+    <a href="/forside" aria-label="Gå til forsiden">
       <!--?xml version="1.0" encoding="UTF-8"?-->
       <!--?xml version="1.0" encoding="UTF-8"?-->
       <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852.47 307.68"
@@ -131,7 +131,9 @@ import KategoriMenu from "../components/KategoriMenu.astro";
     margin: 12px 20px;
   }
 
-  .menu a {
+  .menu a, .menu 
+  
+  button {
     display: block;
     text-decoration: none;
 
@@ -140,7 +142,15 @@ import KategoriMenu from "../components/KategoriMenu.astro";
     font-size: 25px;
   }
 
-  .menu a:hover {
+  button {
+    border: none;
+  background: none;
+ 
+  cursor: pointer;
+  color: inherit;
+  }
+
+  .menu a:hover,  .menu button:hover {
     color: var(--purpleDecoration-color);
     text-decoration: overline;
   }
@@ -222,7 +232,7 @@ import KategoriMenu from "../components/KategoriMenu.astro";
   /***** Open ****/
 
   btn.addEventListener("click", (e) => {
-    e.preventDefault();
+   
     Kategori_Menu.classList.remove("hide");
   });
   /***** Close ****/
