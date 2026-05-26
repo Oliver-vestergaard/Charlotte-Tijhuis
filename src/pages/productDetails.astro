@@ -36,7 +36,7 @@ const product = data?.[0];
     <div class="grid_1-1">
       <div>
        
-        <img class="productImg" src={product.produktimage} alt={`Billede af Smykket: ${product.smykkenavn}`} />
+        <img class="productImg" src={product.produktimage} alt={`Billede af Smykket: ${product.smykkenavn}`}/>
         <img class="productImg" src={product.produkthover} alt={`Billede af Smykket: ${product.smykkenavn} båret på `} />
       </div>
      
@@ -89,126 +89,127 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
   margin-bottom: 1rem;
 }
 .ReservationText p {
- margin: 0 auto;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.bold {
+ font-weight: bold;
+}
+.PrimaryDescription {
  text-align: center;
- margin-bottom: 1rem;
-      }
-      .bold {
-        font-weight: bold;
-      }
-
-      .PrimaryDescription {
-        text-align: center;
-        margin-top: 2rem;
-      }
-
-      .PrimaryDescription h1 {
-        margin-top: 3rem;
-      }
-      .PrimaryDescription p {
-        margin: 0 auto;
-      }
-      .PrimaryDescription h2 {
-  margin-top: 2rem;
-  font-size: 1rem;
+ margin-top: 2rem;
 }
 
-   .price {
-        font-weight: 600;
-      }
+.PrimaryDescription h1 {
+ margin-top: 3rem;
+}
+.PrimaryDescription p {
+ margin: 0 auto;
+}
+.PrimaryDescription h2 {
+ margin-top: 2rem;
+ font-size: 1rem;
+}
+
+.price {
+ font-weight: 600;
+}
 /******** SECTIONS *********/
 
 
 
-      .sectionWrapper {
-        margin: 5rem 0 10rem 0;
-      }
+.sectionWrapper {
+ margin: 5rem 0 10rem 0;
+}
 
-   .grid_1-1 {
-        margin: 5rem 0 5rem 0;
-      }
+.grid_1-1 {
+ margin: 5rem 0 5rem 0;
+}
 
-      /******** IMAGES  *********/
-      .productImg {
-        width: 450px;
-        margin: 0 auto;
-      }
+/******** IMAGES  *********/
+.productImg {
+ width: 450px;
+ margin: 0 auto;
+}
       
 
 /******* BUTTONS ********/
 
-      .ButtonWrapper {
-        width: fit-content;
-        margin: 0 auto;
-        margin-top: 2rem;
-      }
+.ButtonWrapper {
+ width: fit-content;
+ margin: 0 auto;
+ margin-top: 2rem;
+}
 
-      .Accordion_container {
-        margin: 2rem auto;
-        overflow: hidden;
-        max-width: 25rem;
-      }
+.Accordion_container {
+ margin: 2rem auto;
+ overflow: hidden;
+ max-width: 25rem;
+}
 
    
 
-    /******* Desktop ********/
-      @media (min-width: 801px) {
+/******* Desktop ********/
+@media (min-width: 801px) {
 
 
 
-        /****** Text ******/
+/****** Text ******/
 
- .ProductTitle {
-    font-size: 45px;
-    text-align: left;
-  }
-
-
-        .ReservationText p {
-          text-align: left;
-        }
+.ProductTitle {
+  font-size: 45px;
+ text-align: left;
+}
 
 
-             .PrimaryDescription h1 {
-          margin-top: 0rem;
-        }
-
-        .PrimaryDescription p {
-          margin: 1rem 0 0 0;
-        }
+.ReservationText p {
+ text-align: left;
+}
 
 
- .PrimaryDescription {
-          text-align: left;
-          margin-top: 0;
-        }
-        /******** SECTIONS *********/
-        .grid_1-1 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 5rem;
-          margin: 5rem 4rem 0 4rem;
-        }
+.PrimaryDescription h1 {
+ margin-top: 0rem;
+}
 
-    .Accordion_container {
-          max-width: 1000px;
-        }
+.PrimaryDescription p {
+ margin: 1rem 0 0 0;
+}
+.PrimaryDescription h2 {
+ font-size: 1.5625rem;
+}
 
-         /******** IMAGES  *********/
-        .productImg {
-          width: 100%;
-          max-width: 500px;
-        }
+.PrimaryDescription {
+ text-align: left;
+ margin-top: 0;
+}
+/******** SECTIONS *********/
+.grid_1-1 {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+ margin: 5rem 4rem 0 4rem;
+}
+
+.Accordion_container {
+  max-width: 1000px;
+}
+
+/******** IMAGES  *********/
+.productImg {
+ width: 100%;
+ max-width: 500px;
+}
        
 
 
-    /******* BUTTONS ********/
-        .ButtonWrapper {
-          margin: 2rem 0 0 0;
-        }
+/******* BUTTONS ********/
+.ButtonWrapper {
+ margin: 2rem 0 0 0;
+}
 
    
-      }
-    </style>
+}
+</style>
 
 </Layout>
