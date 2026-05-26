@@ -1,10 +1,15 @@
 ---
 import Layout from "../layout/Layout.astro";
+import { Image } from "astro:assets";
+import bohippie from "../assets/imgBohhipie/bohippiehero.jpg";
+import smykke from "../assets/imgBohhipie/bohippieimg3.jpg";
+import butik from "../assets/imgBohhipie/bohippieimg4.jpg";
+import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
 ---
 
 <Layout title="Bohippie" pageClass="bohippieBackground">
   <section class="heroimg">
-    <img src="src/assets/imgBohhipie/bohippiehero.jpg" alt="" />
+    <Image src={bohippie} format="webP" alt="hero billede" />
   </section>
 
   <section class="afsnit1">
@@ -49,14 +54,9 @@ import Layout from "../layout/Layout.astro";
   />
 
   <section class="grid_2">
-    <img
-      src="src/assets/imgBohhipie/bohippieimg3.jpg"
-      alt="Billede af bohippie smykker"
-    />
-    <img
-      src="src/assets/imgBohhipie/bohippieimg4.jpg"
-      alt="Billede fra butikken"
-    />
+    <Image src={smykke} format="webP" alt="Billede af bohippie smykker" />
+
+    <Image src={butik} format="webP" alt="Billede fra butikken" />
   </section>
 
   <section class="afsnit1">
@@ -68,10 +68,7 @@ import Layout from "../layout/Layout.astro";
   </section>
 
   <section class="grid">
-    <img
-      src="src/assets/imgBohhipie/bohippieimg5.jpg"
-      alt="Billede af flere bohippie smykker"
-    />
+    <Image src={halskede} format="webP" alt="Flere billeder af smykker" />
 
     <div>
       <p class="gridtekst">

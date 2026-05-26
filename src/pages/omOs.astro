@@ -1,6 +1,13 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layout/Layout.astro";
+import { Image } from "astro:assets";
+import portret from "../assets/imgOmOs/omospic1.jpg";
+import butik from "../assets/imgOmOs/omos2.jpg";
+import indien1 from "../assets/imgOmOs/omospic3.jpg";
+import indien2 from "../assets/imgOmOs/omospic4.jpg";
+import indien3 from "../assets/imgOmOs/omospic5.jpg";
+import indien4 from "../assets/imgOmOs/omospic6.jpg";
 ---
 
 <Layout title="Om os">
@@ -9,11 +16,8 @@ import Layout from "../layout/Layout.astro";
   </section>
 
   <section class="grid_1-1 pink-bg">
-    <img
-      class="imgomos1"
-      src="src/assets/imgOmOs/omospic1.jpg"
-      alt="Billede af Charlotte og Joanna"
-    />
+    <Image src={portret} format="webP" alt="Billede af Charlotte og Joanna" />
+
     <div class="ptekst">
       <p>
         Mit univers begyndte med en kærlighed til at skabe smykker med hænderne.
@@ -44,24 +48,17 @@ import Layout from "../layout/Layout.astro";
       </p>
     </div>
 
-    <img
-      class="imgomos2"
-      src="src/assets/imgOmOs/omos2.jpg"
-      alt="Billede af Charlotte foran butik"
-    />
+    <Image src={butik} format="webP" alt="Billede af Charlotte foran butik" />
   </section>
 
   <section class="galleri">
     <h2 class="overskrift3">Min Smykkerejse</h2>
 
     <div class="galleri-grid">
-      <img src="src/assets/imgOmOs/omospic3.jpg" alt="Billede fra indien1" />
-      <img src="src/assets/imgOmOs/omospic4.jpg" alt="Billede fra indien2" />
-      <img
-        src="src/assets/imgOmOs/omospic5.jpg"
-        alt="Billede af smykkepose fra indien"
-      />
-      <img src="src/assets/imgOmOs/omospic6.jpg" alt="Billede fra indien3" />
+      <Image src={indien1} format="webP" alt="Billede fra indien1" />
+      <Image src={indien2} format="webP" alt="Billede fra indien2" />
+      <Image src={indien3} format="webP" alt="Billede fra indien3" />
+      <Image src={indien4} format="webP" alt="Billede fra indien4" />
     </div>
 
     <p class="galleri-p">
