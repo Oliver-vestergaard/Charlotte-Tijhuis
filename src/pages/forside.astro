@@ -1,6 +1,8 @@
 ---
+import {Image} from "astro:assets";
+import sølvring from "../assets/imgForside/forside8pic.jpg"
+import herrearmbånd from "../assets/imgForside/forsidepic9.webp"
 import Card from "../components/Card.astro";
-import CardButton from "../components/CardButton.astro";
 import Layout from "../layout/Layout.astro";
 import CtaButton from "../components/CtaButton.astro";
 ---
@@ -45,11 +47,13 @@ import CtaButton from "../components/CtaButton.astro";
 
     <div class="grid1-1">
       <img class="topbillede" src="src/assets/imgForside/forsidepic7.webp" alt="Billede af to læderarmbånd med et kompas, den ene i sort og det andet i brunt" />
-      <img class="topbillede" src="src/assets/imgForside/forside8pic.jpg" alt="Billede af en herre sølv ring med et kompas" />
+      <Image  class="topbillede" src={sølvring} format="webP" alt="Billede af en herre sølv ring med et kompas"/>
       <div class="tekst2">
         <p>Rustikke, rå og tidløse herresmykker i kvalitetsmaterialer. Laves på bestilling efter dine ønsker i sølv, guld eller læder. Herresmykkerne er til dig, der ønsker noget anderledes, råt og maskulint. Jeg håndgraverer i både sølv og guld, og motivet på læderarmbåndene kan tilpasses præcis efter dine ønsker.</p>
       </div>
-      <img class="bundbillede" src="src/assets/imgForside/forsidepic9.webp" alt="Billede af et herrearmånd med forskellige grønne perler" />
+
+<Image  class="bundbillede" src={herrearmbånd} width={1000} format="webP" alt="Billede af et herrearmånd med forskellige grønne perler"/>
+      
     </div>
 
     <h3 class="skrift">Kundeudtalelser:</h3>
