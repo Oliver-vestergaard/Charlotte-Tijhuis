@@ -2,8 +2,12 @@
 import Layout from "../layout/Layout.astro";
 import { Image } from "astro:assets";
 import bohippie from "../assets/imgBohhipie/bohippiehero.jpg";
+import illustration1 from "../assets/imgBohhipie/hand.png";
+import illustration2 from "../assets/imgBohhipie/lotus.png";
 import smykke from "../assets/imgBohhipie/bohippieimg3.jpg";
 import butik from "../assets/imgBohhipie/bohippieimg4.jpg";
+import akvaral1 from "../assets/imgBohhipie/akvaral1.webp";
+import akvaral2 from "../assets/imgBohhipie/akvaral2.png";
 import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
 ---
 
@@ -14,10 +18,7 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
 
   <section class="afsnit1">
     <h4 class="h1overskrift">“Uhøjtidelige luksus smykker”</h4>
-    <img
-      src="src/assets/imgBohhipie/bohippie2.svg"
-      alt="illustration af hånd"
-    />
+    <Image src={illustration1} format="webP" alt="illustration af hånd" />
     <p class="p1">
       Bohippie er mit frie smykkeunivers - en mere uhøjtidelig og legende
       forlængelse af mit arbejde som guldsmed. Her er der plads til det vilde,
@@ -47,11 +48,7 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
     </p>
   </section>
 
-  <img
-    class="akvaral1"
-    src="src/assets/imgBohhipie/akvaral1.webp"
-    alt="Akvaral1"
-  />
+  <Image class="akvaral1" src={akvaral1} format="webP" alt="akvaral1" />
 
   <section class="grid_2">
     <Image
@@ -66,49 +63,42 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
 
   <section class="afsnit1">
     <h4>“Doing what you like, it is freedom”</h4>
-    <img
-      src="src/assets/imgBohhipie/bohhipie5.svg"
-      alt="Illustration af lotusblomst"
-    />
-  </section>
-
-  <section class="grid">
     <Image
-      src={halskede}
-      quality={75}
+      src={illustration2}
       format="webP"
-      alt="Flere billeder af smykker"
+      alt="illustration af lotusblomst"
     />
-
-    <div>
-      <p class="gridtekst">
-        Knytteuniverset handler for mig ikke kun om smykker – det handler også
-        om mennesker, kreativitet og fællesskab. Gennem mine rejser har jeg mødt
-        små kunsthåndværkere og kreative sjæle rundt omkring i verden, som
-        arbejder med helt særlige teknikker og traditioner inden for knytning og
-        håndværk. Derfor betyder det meget for mig at skabe sociale og
-        økonomiske samarbejder med mindre håndværkere, hvor vi kan inspirere
-        hinanden og skabe noget sammen. Flere af dem arbejder med helt andre
-        måder at knytte på, kombinere materialer og indarbejde ædelsten i
-        smykkerne, hvilket giver nye og anderledes udtryk i Bohippie-universet.
-        <br />
-        <br />
-        For mig giver det mening at støtte små kreative håndværk og mennesker, der
-        brænder for det, de laver. Jeg elsker tanken om, at smykkerne ikke bare bærer
-        på sten og materialer, men også på historier, hænder og kulturer fra forskellige
-        steder i verden
-      </p>
-    </div>
   </section>
+
+  <div class="grid-wrapper">
+    <section class="grid">
+      <Image
+        src={halskede}
+        quality={75}
+        format="webP"
+        alt="Flere billeder af smykker"
+      />
+
+      <div>
+        <p class="gridtekst">
+          Knytteuniverset handler for mig ikke kun om smykker – det handler også
+          om mennesker, kreativitet og fællesskab. Gennem mine rejser har jeg
+          mødt små kunsthåndværkere og kreative sjæle rundt omkring i verden,
+          som arbejder med helt særlige teknikker og traditioner inden for
+          knytning og håndværk. <br /><br />Derfor betyder det meget for mig at
+          skabe sociale og økonomiske samarbejder med mindre håndværkere, hvor
+          vi kan inspirere hinanden og skabe noget sammen. Flere af dem arbejder
+          med helt andre måder at knytte på, kombinere materialer og indarbejde
+          ædelsten i smykkerne, hvilket giver nye og anderledes udtryk i
+          Bohippie-universet.
+        </p>
+      </div>
+    </section>
+    <Image class="akvaral2" src={akvaral2} format="webP" alt="akvaral2" />
+  </div>
 </Layout>
 
 <style>
-  .hero {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-  }
-
   .hero img {
     width: 100%;
     height: 100%;
@@ -120,6 +110,7 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
     padding: 4rem 2rem;
     place-self: center;
     margin: 0 auto;
+    position: relative;
   }
 
   .h1overskrift {
@@ -152,27 +143,40 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: start;
   }
 
   .grid img {
-    width: 200px;
+    width: 180px;
     justify-self: center;
     margin-bottom: 5rem;
   }
 
   .gridtekst {
     margin-right: 1.5rem;
+    max-width: 40ch;
   }
 
   .akvaral1 {
     position: absolute;
-    top: 260%;
-    left: 60%;
+    top: 100%;
+    right: 15%;
     width: 30%;
     z-index: -1;
+    pointer-events: none;
   }
 
+  .grid-wrapper {
+    position: relative;
+  }
+
+  .akvaral2 {
+    position: absolute;
+    bottom: -10px;
+    right: 5%;
+    width: 15%;
+    z-index: 0;
+  }
   @media (min-width: 800px) {
     .afsnit1 img {
       width: 120px;
@@ -187,10 +191,15 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
     }
     .akvaral1 {
       position: absolute;
-      top: 190%;
+      top: 180%;
       left: 60%;
       width: 30%;
       z-index: -1;
+    }
+    .akvaral2 {
+      right: 5%;
+      width: 20%;
+      top: 55%;
     }
   }
 </style>
