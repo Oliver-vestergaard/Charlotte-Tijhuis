@@ -57,14 +57,23 @@ import "../style/global.css";
 @media (min-width: 801px) {
 
   .dropdown-menu {
+     
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     gap: 5rem;
     padding: 2rem;
+
     background: var(--section-color);
-    z-index: 1000;
-    width: 100%;
+
+    z-index: 9999;
+
+    width: min(1200px, 100%);
+
   }
 
   .dropdown-menu li a {
