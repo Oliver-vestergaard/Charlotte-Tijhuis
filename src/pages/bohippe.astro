@@ -99,6 +99,7 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
 </Layout>
 
 <style>
+  /*billeder*/
   .hero img {
     width: 100%;
     height: 100%;
@@ -106,31 +107,22 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
     display: block;
   }
 
-  .afsnit1 {
-    padding: 4rem 2rem;
-    place-self: center;
-    margin: 0 auto;
-    position: relative; /*flytte det og placere andre elementer i forhold til det*/
-  }
-
-  .h1overskrift {
-    text-align: center;
-  }
-
   .afsnit1 img {
     width: 70px;
     place-self: center;
   }
 
-  .p1 {
-    margin-top: 2rem;
+  .afsnit1 {
+    padding: 2rem;
     place-self: center;
+    margin: 0 auto;
+    position: relative; /*flytte det og placere andre elementer i forhold til det*/
   }
 
-  .grid_2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+  .grid img {
+    width: 180px;
+    justify-self: center;
+    margin-bottom: 2rem;
   }
 
   .grid_2 img {
@@ -140,26 +132,37 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
     display: block;
   }
 
-  .grid {
+  /*grid*/
+
+  .grid_2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    width: 100%;
   }
 
-  .grid img {
-    width: 180px;
-    justify-self: center;
-    margin-bottom: 5rem;
+  .grid {
+    place-self: center;
+  }
+
+  /*tekst*/
+  .p1 {
+    margin-top: 2rem;
+    place-self: center;
+  }
+
+  .h1overskrift {
+    text-align: center;
   }
 
   .gridtekst {
-    margin-right: 1.5rem;
-    max-width: 40ch;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
+  /*illustrationer*/
   .akvaral1 {
     position: absolute; /*placere et bestemt sted på siden*/
-    top: 100%;
+    top: 150%;
     right: 15%;
     width: 30%;
     z-index: -1;
@@ -172,9 +175,9 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
 
   .akvaral2 {
     position: absolute;
-    bottom: -10px;
+
     right: 5%;
-    width: 15%;
+    width: 20%;
     z-index: 0;
   }
   @media (min-width: 800px) {
@@ -182,6 +185,16 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
       width: 120px;
     }
 
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .grid_2 {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
     .grid_2 img {
       height: 500px;
     }
@@ -189,9 +202,12 @@ import halskede from "../assets/imgBohhipie/bohippieimg5.jpg";
       width: 300px;
       margin-left: 15rem;
     }
+    .gridtekst {
+      max-width: 40ch;
+    }
     .akvaral1 {
       position: absolute;
-      top: 180%;
+      top: 165%;
       left: 60%;
       width: 30%;
       z-index: -1;
