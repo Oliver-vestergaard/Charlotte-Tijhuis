@@ -1,13 +1,12 @@
 ---
-import Layout from "../layout/Layout.astro";
-import CtaButton from "../components/CtaButton.astro";
-import Accordion from "../components/Accordion.astro";
-
+import Layout from "../../layout/Layout.astro";
+import CtaButton from "../../components/CtaButton.astro";
+import Accordion from "../../components/Accordion.astro";
 
 
 
 /*** Henter produktets id fra URL'en ****/
-const id = Astro.url.searchParams.get("id");
+const { id } = Astro.params;
 
 
 /**** URL til vores Supabase database *****/
@@ -45,7 +44,7 @@ const res = await fetch(url, {
 /***** Konverterer data til JSON & gør dataen læsbar i Javascript ********/
 const data = await res.json();
 
-/***** Gemmer første produkt fra arrayet og gemmer det i en variabel ********/
+/***** Gemmer første produkt fra arrayet i en variabel ********/
 const product = data?.[0];
 
 ---
