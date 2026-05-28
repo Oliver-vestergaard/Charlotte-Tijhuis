@@ -24,7 +24,7 @@ const { title, content, overskrift, overskrift2, content2 } = Astro.props;
 
 <style>
   hr {
-    width: 700px;
+    width: 100%;
   }
 
   .Bold {
@@ -32,16 +32,18 @@ const { title, content, overskrift, overskrift2, content2 } = Astro.props;
     margin: 0rem;
     text-align: left;
   }
-  .Accordion {
-    width: 400px;
-  }
+ .Accordion {
+  width: 100%;
+  max-width: 400px;
+}
 
   .content p {
     text-align: left;
+
+  
   }
 
   .content {
-    padding-left: 3rem;
     margin-bottom: 2rem;
     opacity: 0;
     max-height: 0;
