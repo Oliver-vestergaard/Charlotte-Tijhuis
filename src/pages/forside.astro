@@ -5,6 +5,12 @@ import herrearmbånd from "../assets/imgForside/forsidepic9.webp"
 import Card from "../components/Card.astro";
 import Layout from "../layout/Layout.astro";
 import CtaButton from "../components/CtaButton.astro";
+import forsidepic1 from "../assets/imgForside/forsidepic1.webp";
+import forside2pic from "../assets/imgForside/forside2pic.webp";
+import forside3pic from "../assets/imgForside/forside3pic.webp";
+import forsidepic4 from "../assets/imgForside/forsidepic4.webp";
+import forside5pic from "../assets/imgForside/forside5pic.webp";
+import forsidepic7 from "../assets/imgForside/forsidepic7.webp";
 ---
 
 <Layout title="Forside">
@@ -12,9 +18,7 @@ import CtaButton from "../components/CtaButton.astro";
     <video class="video" autoplay muted loop playsinline src="/forsidevideo.mp4"> </video>
     <section class="skriftogknap">
       <h2 class="overskrift1">Nøje udvalgte smykker</h2>
-      
       <CtaButton text="Se signatursmykker" href={`/productList`} />
-    
     </section>
     </div>
     <div>
@@ -25,14 +29,14 @@ import CtaButton from "../components/CtaButton.astro";
     </div>
 
     <section class="grid1-4">
-      <img class="pic1" src="src/assets/imgForside/forsidepic1.webp" alt="Billede af en guldring bestående af 8 billianter" />
+      <img class="pic1" src={forsidepic1.src} alt="Billede af en guldring bestående af 8 billianter">
       <h3 class="skrift">Se mine signatur smykker</h3>
 
       <div class="grid1-2">
-        <img src="src/assets/imgForside/forside2pic.webp" alt="Billede af ring med stor lyserød brilliant" />
-        <img src="src/assets/imgForside/forside3pic.webp" alt="Billede af ring med stor grøn brilliant" />
-        <img src="src/assets/imgForside/forsidepic4.webp" alt="Billede af armbånd med grønne sten" />
-        <img src="src/assets/imgForside/forside5pic.webp" alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om" />
+      <img src={forside2pic.src} alt="Billede af ring med stor lyserød brilliant">
+      <img src={forside3pic.src} alt="Billede af ring med stor grøn brilliant">
+      <img src={forsidepic4.src} alt="Billede af armbånd med grønne sten">
+      <img src={forside5pic.src} alt="Billede af halskæde med lyserød brilliant og 14kt guld rundt om">
       </div>
     </section>
 
@@ -45,7 +49,7 @@ import CtaButton from "../components/CtaButton.astro";
     <h2 class="h2tekst2">Tidsløse herresmykker med kant</h2>
 
     <div class="grid1-1">
-      <img class="topbillede" src="src/assets/imgForside/forsidepic7.webp" alt="Billede af to læderarmbånd med et kompas, den ene i sort og det andet i brunt" />
+        <img class="topbillede" src={forsidepic7.src} alt="Billede af to læderarmbånd med et kompas, den ene i sort og det andet i brunt">
       <Image  class="topbillede" src={sølvring} format="webP" alt="Billede af en herre sølv ring med et kompas"/>
       <div class="tekst2">
         <p>Rustikke, rå og tidløse herresmykker. Laves på bestilling efter dine ønsker i sølv, guld eller læder. Herresmykkerne er til dig, der ønsker noget anderledes, råt og maskulint. </p>
@@ -88,7 +92,7 @@ import CtaButton from "../components/CtaButton.astro";
 
       .skriftogknap {
         position: absolute;  /* Placerer skrift og knap ovenpå videoen  */
-        top: 60%;
+        top: 50%;
         display: flex;
         flex-direction: column;  /* Skrift og knap er placeret under hinanden */
         justify-content: center;  /* centrerer indholdet */
