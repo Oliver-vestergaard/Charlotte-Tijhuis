@@ -8,6 +8,7 @@ import indien1 from "../assets/imgOmOs/omospic3.jpg";
 import indien2 from "../assets/imgOmOs/omospic4.jpg";
 import indien3 from "../assets/imgOmOs/omospic5.jpg";
 import indien4 from "../assets/imgOmOs/omospic6.jpg";
+import vaerkstedimg from "../assets/imgOmOs/vaerkstedimg.webp";
 ---
 
 <Layout title="Om os">
@@ -43,7 +44,7 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
   <section class="grid_1-1">
     <div class="ptekst2">
       <h2 class="overskrift2">Autentisk og upoleret</h2>
-      <p>
+      <p class="ptekst3">
         Jeg elsker det upolerede og autentiske — for mig behøver noget ikke være
         perfekt for at være smukt. <br /><br /> Som jeg ofte siger: “Tag øjeblikket
         og gør det perfekt.” I dag driver jeg butikken sammen med Joana, som med sin
@@ -111,7 +112,7 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
   <h2 class="overskrift4">Et glimt fra værkstedet</h2>
   <Card
     text="Alle mine smykker er håndlavede og skabt med fokus på detaljer og personlighed. Kig gerne forbi, hvis du har lyst til en snak om idéer, redesign eller et helt særligt smykke skabt kun til dig."
-    image="src/assets/imgOmOs/vaerkstedimg.webp"
+    image={vaerkstedimg.src}
     title="Billede af værksted"
   />
 </Layout>
@@ -119,8 +120,9 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
 <style>
   .grid_1-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 5rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 
   .grid_1-1 img {
@@ -139,11 +141,14 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
   .overskrift3 {
     margin-right: 6rem;
     text-align: end;
+    margin-top: 4rem;
+  margin-bottom: 1rem;
   }
 
   .overskrift4 {
     margin-left: 1rem;
     margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 
   /*tekst*/
@@ -159,6 +164,10 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
+  }
+
+  .ptekst3{
+    margin-top: 1rem;
   }
 
   .pink-bg .ptekst {
@@ -189,6 +198,7 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
   /*desktop*/
   @media (min-width: 800px) {
     .grid_1-1 {
+      grid-template-columns: 1fr 1fr;
       margin-top: 10rem;
       margin-bottom: 10rem;
     }
@@ -210,6 +220,11 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
 
     .galleri-p {
       padding: 3rem;
+    }
+
+    .ptekst3{
+      margin: 0 auto;
+      margin-top: 1rem;
     }
   }
 </style>

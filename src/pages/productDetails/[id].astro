@@ -1,41 +1,49 @@
 ---
-import Layout from "../layout/Layout.astro";
-import CtaButton from "../components/CtaButton.astro";
-import Accordion from "../components/Accordion.astro";
+import Layout from "../../layout/Layout.astro";
+import CtaButton from "../../components/CtaButton.astro";
+import Accordion from "../../components/Accordion.astro";
 
-export const prerender = false;
+/*** HENTER ALLE MULIGE ID'ER (KRÆVES TIL DYNAMIC ROUTES) ***/
+export async function getStaticPaths() {
+  
+  const baseUrl = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis`;
 
+  const res = await fetch(`${baseUrl}?select=id`, {
+    headers: {
+      apikey: import.meta.env.SUPABASE_PUBLISHABLE_KEY,
+      Authorization: `Bearer ${import.meta.env.SUPABASE_PUBLISHABLE_KEY}`,
+    },
+  });
 
+  const data = await res.json();
 
-/*** Henter produktets id fra URL'en ****/
-const id = Astro.url.searchParams.get("id");
-
-
-/**** URL til vores Supabase database *****/
-const baseUrl = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis`;
-
-/***** Opretter parametre til API'et, så vi kan styre hvilke data der hentes */
-const params = new URLSearchParams();
-
-
-/*** Henter alle kolonner fra databasen ***/
-params.set("select", "*");
-
-
-/***** Finder kun produktet med det valgte id *****/
-if (id) {
-  params.set("id", `eq.${id}`);
+  return data.map((item) => ({
+    params: {
+      id: item.id.toString(),
+    },
+  }));
 }
 
-/***** Samler den endelige API URL ****/
+/*** HENTER ID FRA URL ***/
+const { id } = Astro.params;
+
+/*** SUPABASE URL ***/
+const baseUrl = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis`;
+
+/*** BYGGER QUERY PARAMS ***/
+const params = new URLSearchParams();
+params.set("select", "*");
+
+/*** FILTRERER PÅ ID ***/
+params.set("id", `eq.${id}`);
+
+/*** FÆRDIG API URL ***/
 const url = `${baseUrl}?${params.toString()}`;
 
-/***** Henter API key fra .env ********/
+/*** API KEY ***/
 const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
 
-
-
-/***** Fetch request til Supabase ********/
+/*** FETCH DATA FRA SUPABASE ***/
 const res = await fetch(url, {
   headers: {
     apikey: apiKey,
@@ -43,12 +51,11 @@ const res = await fetch(url, {
   },
 });
 
-/***** Konverterer data til JSON & gør dataen læsbar i Javascript ********/
+/*** PARSER JSON ***/
 const data = await res.json();
 
-/***** Gemmer første produkt fra arrayet og gemmer det i en variabel ********/
+/*** HENTER PRODUKTET ***/
 const product = data?.[0];
-
 ---
 
 <Layout title={product.smykkenavn}>
@@ -149,7 +156,7 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
 
 /******** IMAGES  *********/
 .productImg {
- width: 450px;
+ width: 300px;
  margin: 0 auto;
 }
       
@@ -166,6 +173,7 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
  margin: 2rem auto;
  overflow: hidden;
  max-width: 25rem;
+ width: 300px;
 }
 
    
@@ -185,6 +193,7 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
 
 .ReservationText p {
  text-align: left;
+margin: 0rem;
 }
 
 
@@ -212,7 +221,9 @@ Dette gælder også ved omsmeltning af gammelt guld, hvor personlig gennemgang e
 }
 
 .Accordion_container {
-  max-width: 1000px;
+  width: 1000px;
+  margin: 1rem 0 2rem 0;
+  
 }
 
 /******** IMAGES  *********/

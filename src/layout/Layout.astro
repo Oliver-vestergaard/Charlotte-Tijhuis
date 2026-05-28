@@ -22,16 +22,25 @@ const { title, pageClass } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Coming+Soon&family=Gowun+Batang&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
   <body class={pageClass}>
+   
     <header>
       <Menu />
     </header>
 
     <main>
+        <div class="container">
       <slot />
+      </div>
     </main>
 
     <footer>
       <Footer />
     </footer>
+    
   </body>
 </html>
+
+<style>
+
+
+</style>
