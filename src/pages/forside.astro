@@ -12,7 +12,9 @@ import CtaButton from "../components/CtaButton.astro";
     <video class="video" autoplay muted loop playsinline src="/forsidevideo.mp4"> </video>
     <section class="skriftogknap">
       <h2 class="overskrift1">Nøje udvalgte smykker</h2>
+      
       <CtaButton text="Se signatursmykker" href={`/productList`} />
+    
     </section>
     </div>
     <div>
@@ -46,7 +48,7 @@ import CtaButton from "../components/CtaButton.astro";
       <img class="topbillede" src="src/assets/imgForside/forsidepic7.webp" alt="Billede af to læderarmbånd med et kompas, den ene i sort og det andet i brunt" />
       <Image  class="topbillede" src={sølvring} format="webP" alt="Billede af en herre sølv ring med et kompas"/>
       <div class="tekst2">
-        <p>Rustikke, rå og tidløse herresmykker i kvalitetsmaterialer. Laves på bestilling efter dine ønsker i sølv, guld eller læder. Herresmykkerne er til dig, der ønsker noget anderledes, råt og maskulint. Jeg håndgraverer i både sølv og guld, og motivet på læderarmbåndene kan tilpasses præcis efter dine ønsker.</p>
+        <p>Rustikke, rå og tidløse herresmykker. Laves på bestilling efter dine ønsker i sølv, guld eller læder. Herresmykkerne er til dig, der ønsker noget anderledes, råt og maskulint. </p>
       </div>
 
 <Image  class="bundbillede" src={herrearmbånd} width={1000} format="webP" alt="Billede af et herrearmånd med forskellige grønne perler"/>
@@ -96,12 +98,13 @@ import CtaButton from "../components/CtaButton.astro";
         
       }
 
+
       .overskrift1 {
         color: var(--background-color);
         margin-bottom: 0 auto;
       }
 
-
+    
       /* Overskrift og tekstafsnit */
 
       .tekst {
