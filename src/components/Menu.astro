@@ -18,7 +18,7 @@ import KategoriMenu from "../components/KategoriMenu.astro";
         </ul>
       </li>
 
-      <li><a href="/omOs">Om mig</a></li>
+      <li><a href="/omOs">Guldsmed</a></li>
       <li><a href="/bohippe">Bohippie</a></li>
       <li><a href="/kontakt">Kontakt</a></li>
     </ul>
@@ -215,28 +215,36 @@ import KategoriMenu from "../components/KategoriMenu.astro";
 </style>
 
 <script>
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector("nav");
+/***** Burger Menu ********/
 
-  burger.addEventListener("click", burgerClick);
-  function burgerClick() {
-    burger.classList.toggle("active");
-    nav.classList.toggle("active");
-  }
 
+const burger = document.querySelector(".burger");
+
+
+const nav = document.querySelector("nav");
+
+/*** Lytter efter klik på burger menuen ****/
+burger.addEventListener("click", burgerClick);
+
+/*** Skifter mellem at tilføje og fjerne classen "active" når der klikkes. ****/
+function burgerClick() {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+}
   /***** KategoriMenu ********/
 
   const btn = document.querySelector("#btn");
   const Kategori_Menu = document.querySelector("#kategoriMenuPopup");
 
   /***** Open ****/
-
+  /**** Åbner menuen når der klikkes på knappen ***/
   btn.addEventListener("click", (e) => {
    
     Kategori_Menu.classList.remove("hide");
   });
   /***** Close ****/
 
+  /****  Lukker menuen hvis der klikkes udenfor popup/menu ***/
   document.addEventListener("click", (e) => {
     if (!Kategori_Menu.contains(e.target) && !btn.contains(e.target)) {
       Kategori_Menu.classList.add("hide");
