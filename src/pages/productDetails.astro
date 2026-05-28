@@ -5,21 +5,37 @@ import Accordion from "../components/Accordion.astro";
 
 export const prerender = false;
 
+
+
+/*** Henter produktets id fra URL'en ****/
 const id = Astro.url.searchParams.get("id");
 
+
+/**** URL til vores Supabase database *****/
 const baseUrl = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis`;
 
+/***** Opretter parametre til API'et, så vi kan styre hvilke data der hentes */
 const params = new URLSearchParams();
+
+
+/*** Henter alle kolonner fra databasen ***/
 params.set("select", "*");
 
+
+/***** Finder kun produktet med det valgte id *****/
 if (id) {
   params.set("id", `eq.${id}`);
 }
 
+/***** Samler den endelige API URL ****/
 const url = `${baseUrl}?${params.toString()}`;
 
+/***** Henter API key fra .env ********/
 const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
 
+
+
+/***** Fetch request til Supabase ********/
 const res = await fetch(url, {
   headers: {
     apikey: apiKey,
@@ -27,8 +43,12 @@ const res = await fetch(url, {
   },
 });
 
+/***** Konverterer data til JSON & gør dataen læsbar i Javascript ********/
 const data = await res.json();
+
+/***** Gemmer første produkt fra arrayet og gemmer det i en variabel ********/
 const product = data?.[0];
+
 ---
 
 <Layout title={product.smykkenavn}>

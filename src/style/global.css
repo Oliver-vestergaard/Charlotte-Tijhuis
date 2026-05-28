@@ -80,12 +80,11 @@ p {
   --purpleDecoration-color: #5e2750;
 }
 
-.bohippieBackground {
-  background-color: var(--cta-color);
-}
-
 body {
   background-color: var(--background-color);
+}
+.bohippieBackground {
+  background-color: var(--cta-color);
 }
 /********** DESKTOP **********/
 @media (min-width: 801px) {
