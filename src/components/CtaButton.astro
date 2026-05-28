@@ -18,6 +18,10 @@ const {
 
 
 <style>
+
+
+
+
   .btn_wrapper {
     display: inline-block;
     position: relative;
@@ -32,10 +36,10 @@ const {
   .btn {
     display: block;
     font-family: Gowun Batang;
-    padding: 10px 30px;
+    padding: 10px 20px;
     cursor: pointer;
     border: none;
-    font-size: 1.3rem;
+    font-size: 0.6872rem;
     background-color: #f5c3c8;
 
     clip-path: var(--clip);
@@ -49,4 +53,10 @@ const {
   .btn_wrapper:hover {
     background: var(--purpleDecoration-color);
   }
+@media (min-width: 801px) { 
+    .btn {
+   padding: 10px 30px;
+    font-size: 1.3rem;
+}
+}
 </style>
