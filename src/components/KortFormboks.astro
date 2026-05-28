@@ -3,14 +3,17 @@ const { name, options } = Astro.props;
 ---
 
 <select class="kort-formboks" name={name} required>
-  <option value="">Vælg smykke</option>
-  {options.map((option) => <option value={option}>{option}</option>)}
+  <option value="">Vælg smykke</option> 
+  {options.map((option: string) => <option value={option}>{option}</option>)}
 </select>
 
 <style>
+
+
+
   .kort-formboks {
     width: 250px;
-    height: 40px;
+    height: 40px; 
     border-radius: 15px;
     border: 1px solid black;
     background-color: #eeeded;
