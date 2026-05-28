@@ -50,18 +50,16 @@ import Layout from "../layout/Layout.astro";
       </div>
     </div>
 
+    </section>
     <style>
-.grid {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+
+      /* Tekstafsnit */
 
       .kontakt_tekst {
-        line-height: 1.6;
-        max-width: 65ch;
         margin: 0 auto 2rem;
       }
+
+      /* Form */
 
       .sectionform {
         display: grid;
@@ -69,9 +67,15 @@ import Layout from "../layout/Layout.astro";
         margin: 0 auto;
       }
 
+      .grid {
+      display: flex;
+      flex-direction: column; /* ligger form og den grå boks under hinanden */
+      width: 100%;
+      }
+
       #forms {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;  /* ligger under hinanden */
         gap: 15px;
         padding: 20px 20px;
       }
@@ -92,60 +96,71 @@ import Layout from "../layout/Layout.astro";
       }
 
       .sendknap {
-        width: 140px;
-        height: 50px;
+        width: 140px; /* bestemmer knappens bredde */
+        height: 50px; /* bestemmer knappens højde */
         background-color: var(--purpleDecoration-color);
         color: var(--background-color);
         border: none;
         font-size: 20px;
-        font-family: Gowun Batang;
         cursor: pointer;
-        clip-path: polygon(12% 0%, 88% 0%, 100% 20%, 100% 80%, 88% 100%, 12% 100%, 0% 80%, 0% 20%);
+        clip-path: polygon(12% 0%, 88% 0%, 100% 20%, 100% 80%, 88% 100%, 12% 100%, 0% 80%, 0% 20%); /* laver formen på knappen */
         margin-bottom: 3rem;
       }
 
       .sendknap:hover {
         background-color: #000000;
-        transition: 0.5 ease;
+        transition: 0.5 ease; /* farven skifter langsomt */
+      }
+
+
+      /* Grå boks */
+
+       .kontaktinfo {
+        background-color: #eeeded;
+        padding: 40px 30px;
+        width: 350px; /* bestemmer breden på boksen */
+        margin-left: 2rem;
+      }
+
+       .butikinfo {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
       }
 
       .ptekst {
         margin-bottom: 1rem;
       }
 
-      .kontaktinfo {
-        background-color: #eeeded;
-        padding: 40px 30px;
-        width: 300px;
-        margin-left: 2rem;
-  
-      }
-
-      .butikinfo {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-      }
-
       .tider {
-        list-style: none;
+        list-style: none; /* fjerner prikkerne fra listen */
       }
+
+
+      /* Desktop version */
+
 
       @media (min-width: 800px) {
+       
+        /* Tekstafsnit */
+      
         .kontakt_tekst {
           margin: 0 auto 8rem;
         }
 
+         /* Form */
+
         .grid {
           display: flex;
-      flex-direction: row;
+          flex-direction: row; /* ligger elementerne ved siden af hinanden */
 
         }
 
+         /* Grå boks */
+
         .kontaktinfo {
-          width: 400px;
-          margin-left: 6rem;
+          width: 400px;  /* gør boksen bredere */
+          margin-left: 10rem;
         }
       }
     </style>
-  </section></Layout
->
+ </Layout>
