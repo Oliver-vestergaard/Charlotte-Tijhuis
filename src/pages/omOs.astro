@@ -120,36 +120,17 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-
-    align-items: stretch;
     margin-bottom: 5rem;
   }
 
   .grid_1-1 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    object-fit: cover; /*får billedet til at fylde hele boksen uden at blive skævt*/
+    display: block; /*gør elementet til en blok*/
   }
 
-  .ptekst {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .ptekst2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-  }
-
-  .pink-bg .ptekst {
-    background-color: #d9868f;
-    padding: 3rem;
-  }
+  /*overskrifter*/
 
   .overskrift2 {
     text-align: center;
@@ -165,6 +146,28 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
     margin-top: 3rem;
   }
 
+  /*tekst*/
+
+  .ptekst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ptekst2 {
+    display: flex; /*placere og justere indhold i række eller kolonne*/
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .pink-bg .ptekst {
+    background-color: #d9868f;
+    padding: 3rem;
+  }
+
+  /*de fire billeder*/
+
   .galleri-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -174,7 +177,7 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
   .galleri-grid img {
     width: 105%;
     height: 120px;
-    object-fit: cover;
+    object-fit: cover; /*får billedet til at fylde hele boksen uden at blive skævt*/
     display: block;
   }
 
@@ -183,12 +186,9 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
     padding: 1rem;
   }
 
-  /*dekstop*/
+  /*desktop*/
   @media (min-width: 800px) {
     .grid_1-1 {
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      align-items: stretch;
       margin-top: 10rem;
       margin-bottom: 10rem;
     }
@@ -196,12 +196,6 @@ import indien4 from "../assets/imgOmOs/omospic6.jpg";
     .grid_1-1 img {
       height: 100%;
       object-fit: cover;
-    }
-
-    .ptekst {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .galleri-grid img {
