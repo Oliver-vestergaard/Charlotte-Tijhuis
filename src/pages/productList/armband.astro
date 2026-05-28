@@ -1,14 +1,15 @@
 ---
-
-import ProductCard from "../components/ProductCard.astro";
-import SortButton from "../components/SortButton.astro";
-import Layout from "../layout/Layout.astro";
-
+import ProductCard from "../../components/ProductCard.astro";
+import SortButton from "../../components/SortButton.astro";
+import Layout from "../../layout/Layout.astro";
 
 const baseUrl = `${import.meta.env.SUPABASE_URL}/rest/v1/Charlotte_Tijhuis`;
 
 const params = new URLSearchParams();
+
 params.set("select", "*");
+
+params.set("kategori", "eq.armband");
 
 const url = `${baseUrl}?${params.toString()}`;
 
@@ -25,7 +26,7 @@ const data = await fetch(url, res).then((res) => res.json());
 ---
 
 <Layout title="Signatur Smykker">
-  <h1 class="bestseller_title">Signatur Smykker</h1>
+  <h1 class="bestseller_title">Armbånd</h1>
   <div class="grafisk_element">
     <p class="productlist_p">Her ser I mine signatursmykker, som alle er håndlavede, personlige og skabt med fokus på kvalitet og god energi. I er altid velkomne til at kontakte mig, hvis I har særlige forespørgsler eller ønsker. Jeg tilbyder også at omsmelte gamle smykker og forvandle dem til nye, unikke designs.</p>
   </div>
